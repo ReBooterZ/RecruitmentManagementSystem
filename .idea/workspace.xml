@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77f862f4-6777-4fd1-8b45-94962e278424" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/style/css/bootstrap-select.min.css" afterPath="$PROJECT_DIR$/style/css/bootstrap-select.min.css" />
-      <change beforePath="$PROJECT_DIR$/style/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/style/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/style/css/flaticon.css" afterPath="$PROJECT_DIR$/style/css/flaticon.css" />
-      <change beforePath="$PROJECT_DIR$/style/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/style/css/font-awesome.min.css" />
-      <change beforePath="$PROJECT_DIR$/style/css/owl.carousel.min.css" afterPath="$PROJECT_DIR$/style/css/owl.carousel.min.css" />
-      <change beforePath="$PROJECT_DIR$/style/css/owl.theme.default.min.css" afterPath="$PROJECT_DIR$/style/css/owl.theme.default.min.css" />
-      <change beforePath="$PROJECT_DIR$/style/css/style-default.css" afterPath="$PROJECT_DIR$/style/css/style-default.css" />
-      <change beforePath="$PROJECT_DIR$/style/js/Chart.min.js" afterPath="$PROJECT_DIR$/style/js/Chart.min.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/application.js" afterPath="$PROJECT_DIR$/style/js/application.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/bootstrap-select.min.js" afterPath="$PROJECT_DIR$/style/js/bootstrap-select.min.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/style/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/common.js" afterPath="$PROJECT_DIR$/style/js/common.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/ga.js" afterPath="$PROJECT_DIR$/style/js/ga.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/jqcbxgooglemap.js" afterPath="$PROJECT_DIR$/style/js/jqcbxgooglemap.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/jquery-3.2.1.min.js" afterPath="$PROJECT_DIR$/style/js/jquery-3.2.1.min.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/jquery.js" afterPath="$PROJECT_DIR$/style/js/jquery.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/jquery.smooth-scroll.min.js" afterPath="$PROJECT_DIR$/style/js/jquery.smooth-scroll.min.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/jquery.validate.min.js" afterPath="$PROJECT_DIR$/style/js/jquery.validate.min.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/style/js/owl.carousel.min.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/stats.js" afterPath="$PROJECT_DIR$/style/js/stats.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/switcher.js" afterPath="$PROJECT_DIR$/style/js/switcher.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/theme.js" afterPath="$PROJECT_DIR$/style/js/theme.js" />
-      <change beforePath="$PROJECT_DIR$/style/js/util.js" afterPath="$PROJECT_DIR$/style/js/util.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,11 +13,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="244">
               <caret line="1190" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1233" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dblib.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/dblib.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -93,6 +89,8 @@
         <option value="$PROJECT_DIR$/style/js/switcher.js" />
         <option value="$PROJECT_DIR$/style/js/theme.js" />
         <option value="$PROJECT_DIR$/style/js/util.js" />
+        <option value="$PROJECT_DIR$/dblib.php" />
+        <option value="$PROJECT_DIR$/config.ini" />
       </list>
     </option>
   </component>
@@ -139,6 +137,11 @@
               <item name="UzhavarSanthai-Management-System" type="b2602c69:ProjectViewProjectNode" />
               <item name="UzhavarSanthai-Management-System" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="UzhavarSanthai-Management-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UzhavarSanthai-Management-System" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -150,6 +153,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../etest/SNET_v3.4_portal" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Ini" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -184,12 +188,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522767252739</updated>
       <workItem from="1522767254554" duration="7310000" />
-      <workItem from="1522850600181" duration="1669000" />
+      <workItem from="1522850600181" duration="3448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8979000" />
+    <option name="totallyTimeSpent" value="10758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="-4" width="1539" height="904" extended-state="6" />
@@ -443,10 +447,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="1594" column="9" lean-forward="false" selection-start-line="1594" selection-start-column="9" selection-end-line="1594" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dblib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="1190" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1233" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dblib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding />
         </state>
       </provider>
