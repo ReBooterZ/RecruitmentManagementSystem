@@ -9,9 +9,9 @@ jQuery(document).ready(function ($) {
 
 
         //Create Maps Using Google Map Event Listner
-        google.maps.event.addDomListener(window, 'load', function() {
+        google.maps.event.addDomListener(window, 'load', function () {
 
-            $lz_map_selector.each(function(index) {
+            $lz_map_selector.each(function (index) {
                 //Create Jquery Object of Current Item
                 var elem = $($lz_map_selector);
                 //console.log(elem);
@@ -34,7 +34,8 @@ jQuery(document).ready(function ($) {
                 if ($.isArray(settings.mapOptions.zoom)) {
                     gmOptions.zoom = (settings.mapOptions.zoom.hasOwnProperty(index)) ? settings.mapOptions.zoom[index] : 8;
                 } else {
-                    gmOptions.zoom = settings.mapOptions.zoom;;
+                    gmOptions.zoom = settings.mapOptions.zoom;
+                    ;
                 }
 
                 if ($.isArray(settings.mapOptions.mapType)) {
@@ -73,27 +74,26 @@ jQuery(document).ready(function ($) {
                 var CbMarker = new google.maps.Marker({
                     position: gmOptions.center,
                     map: CbMap,
-                    title:gmOptions.title,
+                    title: gmOptions.title,
                     icon: gmOptions.markerIcon
                 });
 
                 //listen to marker click event
-                google.maps.event.addListener(CbMarker, 'click', function() {
-                    infowindow.open(CbMap,CbMarker);
+                google.maps.event.addListener(CbMarker, 'click', function () {
+                    infowindow.open(CbMap, CbMarker);
                 });
 
                 //add window resize event
                 google.maps.event.addDomListener(
                     window,
                     'resize',
-                    function() {
+                    function () {
 
                         var center_new = CbMap.getCenter();
                         google.maps.event.trigger(CbMap, "resize");
                         CbMap.setCenter(center_new);
                     }
                 );
-
 
 
             });

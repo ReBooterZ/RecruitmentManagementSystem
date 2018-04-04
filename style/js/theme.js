@@ -273,7 +273,7 @@ Last Update: 27.02.2018
         //find the window width and if greater than tablet
         var czwindowsize = $(window).width();
         var czwindowsize_break = 768;
-        var czwindowsize_grtipad = (czwindowsize >= czwindowsize_break ) ? true : false;  //if desktop or greater
+        var czwindowsize_grtipad = (czwindowsize >= czwindowsize_break) ? true : false;  //if desktop or greater
 
         $('.gotome').smoothScroll(
             {
