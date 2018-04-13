@@ -15,16 +15,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST['gender'];
     $role = $_POST['role'];
 
-    $sql = "SELECT id, name FROM users WHERE username = '$username' and password = '$password'";
+    $sql = "INSERT INTO users(username,password,name,dob,gender,address,role_id) values (
+'$username',
+'$password',
+'$name',
+'$dob',
+'$gender',
+'$address',
+'$role'
+)";
 
-    if($result = $DB->select($sql)) {
-        $id = $result[0]['id'];
-        $name = $result[0]['name'];
-        $_SESSION['user'] = $id;
-        setcookie("user", $id, time() + (86400 * 30), "/");
-        setcookie("username", $name, time() + (86400 * 30), "/");
-        redirect("http://uzhavarsandhai.com/account/account.php");
-
+    if($result = $DB->query($sql)) {
+        redirect("http://uzhavarsandhai.com/account/login.php");
     } else {
         echo "Wrong Credentials";
     }

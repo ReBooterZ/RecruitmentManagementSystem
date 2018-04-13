@@ -1,27 +1,18 @@
 <?php
-require("theme/lib.php");
-require ("lib/dblib.php");
+require("./theme/lib.php");
+require("./lib/dblib.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$DB = new Db();
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+$sql = "SELECT id, name, cost, images, category, description FROM items WHERE id > 0";
 
-    $sql = "SELECT id, name FROM users WHERE username = '$username' and password = '$password'";
-
-    if ($result = $DB->select($sql)) {
-        $id = $result[0]['id'];
-        $name = $result[0]['name'];
-        $_SESSION['user'] = $id;
-        setcookie("user", $id, time() + (86400 * 30), "/");
-        setcookie("username", $name, time() + (86400 * 30), "/");
-        redirect("http://uzhavarsandhai.com/account/account.php");
-
-    } else {
-        echo "Wrong Credentials";
-    }
+if ($result = $DB->select($sql)) {
+    $items = $result;
+} else {
+    echo "Wrong Credentials";
 }
 ?>
+
 <!DOCTYPE html>
 <html class="supports-js supports-no-touch supports-csstransforms supports-csstransforms3d supports-fontface js csstransitions shopify-features__smart-payment-buttons--enabled"
       lang="en" style="">
@@ -30,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo get_meta();
     echo get_styles();
     ?>
-    <title> Account - Login </title>
+    <title> List Items </title>
 </head>
 
 <body class="template-index" style="background: rgb(255, 255, 255);">
@@ -69,46 +60,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <input type="submit" value="">
                                         </form>
                                     </div>
-                                    <div class="widget widget-category">
-                                        <h2 class="title18 title-widget font-bold">category</h2>
-                                        <ul class="list-none wg-list-cat">
-                                            <li>
-                                                <a href="/">Home</a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection.php">Fruits</a>
-                                            </li>
-                                            <li>
-                                                <a href="/collection.php">Shop</a>
-                                            </li>
-                                            <li>
-                                                <a href="/latestnews.php">Latest Update</a>
-                                            </li>
-                                            <li>
-                                                <a href="/aboutus.php">About</a>
-                                            </li>
-                                            <li>
-                                                <a href="/contact.php">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                     <div class="widget widget-filter-price widget-container widget_product_categories filter-block filter-custom filter-tag">
                                         <h2 class="title18 title-widget font-bold">Price</h2>
                                         <div class="widget-content">
                                             <ul class="list-filter size-filter box-list-stype">
                                                 <li class="li-price">
+                                                    <input type="checkbox" value="0-100">
+                                                    <a href="javascript:void(0)" title="Rs0 - Rs100"
+                                                       class="">Rs0-Rs100</a>
+                                                </li>
+                                                <li class="li-price">
                                                     <input type="checkbox" value="100-200">
-                                                    <a href="javascript:void(0)" title="$100-$200"
-                                                       class="">$100-$200</a>
+                                                    <a href="javascript:void(0)" title="Rs100 - Rs200"
+                                                       class="">Rs100 - Rs200</a>
                                                 </li>
                                                 <li class="li-price">
                                                     <input type="checkbox" value="200-300">
                                                     <a href="javascript:void(0)" title="$200-$300"
-                                                       class="">$200-$300</a>
+                                                       class="">Rs200 - Rs300</a>
                                                 </li>
                                                 <li class="li-price">
                                                     <input type="checkbox" value="0-100">
-                                                    <a href="javascript:void(0)" title="$0-$100" class="">$0-$100</a>
+                                                    <a href="javascript:void(0)" title="Above Rs300" class="">Above
+                                                        Rs300</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -154,413 +128,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                 </li>
                                                 <li class="li-price ">
                                                     <input type="checkbox" value="blue">
-                                                    <a href="javascript:void(0)" class="">blue</a>
+                                                    <a href="javascript:void(0)" class="">Blue</a>
                                                 </li>
                                                 <li class="li-price ">
                                                     <input type="checkbox" value="white">
-                                                    <a href="javascript:void(0)" class="">white</a>
+                                                    <a href="javascript:void(0)" class="">White</a>
                                                 </li>
                                                 <li class="li-price ">
                                                     <input type="checkbox" value="orange">
-                                                    <a href="javascript:void(0)" class="">orange</a>
+                                                    <a href="javascript:void(0)" class="">Orange</a>
                                                 </li>
                                                 <li class="li-price ">
                                                     <input type="checkbox" value="black">
-                                                    <a href="javascript:void(0)" class="">black</a>
+                                                    <a href="javascript:void(0)" class="">Black</a>
                                                 </li>
                                                 <li class="li-price ">
                                                     <input type="checkbox" value="pupple">
-                                                    <a href="javascript:void(0)" class="">pupple</a>
+                                                    <a href="javascript:void(0)" class="">Purple</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="collection-sidebar">
-                                        <div class="widget widget-new-product">
-                                            <h2 class="title18 title-widget font-bold">best sellers</h2>
-                                            <div class="wg-product-slider">
-                                                <div class="wrap-item group-navi owl-carousel owl-theme"
-                                                     data-pagination="false" data-navigation="true"
-                                                     data-itemscustom="[[0,1],[560,2],[768,1]]"
-                                                     style="opacity: 1; display: block;">
-                                                    <div class="owl-wrapper-outer">
-                                                        <div class="owl-wrapper"
-                                                             style="width: 1200px; left: 0px; display: block; transition: all 0ms ease; transform: translate3d(0px, 0px, 0px);">
-                                                            <div class="owl-item active" style="width: 300px;">
-                                                                <div class="item">
-                                                                    <div class="item-wg-product table">
-                                                                        <div class="product-thumb">
-                                                                            <a href="/products/dfsd"
-                                                                               class="product-thumb-link zoom-thumb">
-                                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_31_grande.jpg?v=1515125720"
-                                                                                     alt="dfsd">
-                                                                            </a>
-                                                                            <a href="javascript:void(0)"
-                                                                               class="quickview-link quick-view engoj-btn-quickview"><i
-                                                                                        class="fa fa-search"
-                                                                                        aria-hidden="true"></i></a>
-                                                                        </div>
-                                                                        <div class="product-info">
-                                                                            <h3 class="product-title"><a
-                                                                                        href="/collections/all/products/dfsd">dfsd</a>
-                                                                            </h3>
-                                                                            <div class="product-price">
-                                                                                <ins class="color"><span><span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$5.99"
-                                                                                                data-currency-inr="Rs. 388.68"
-                                                                                                data-currency="INR">Rs. 388.68</span></span>
-                                                                                </ins>
-                                                                            </div>
-                                                                            <div class="product-rate">
-                <span class="spr-badge" id="spr_badge_703337070634" data-rating="0.0"><span
-                            class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i></span><span class="spr-badge-caption">No reviews</span>
-</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                    <div class="item-wg-product table">
-                                                                        <div class="product-thumb">
-                                                                            <a href="/products/copy-of-apetito-pure-fruit-juice"
-                                                                               class="product-thumb-link zoom-thumb">
-                                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_06_grande.jpg?v=1514257231"
-                                                                                     alt="Aurore Grape">
-                                                                            </a>
-                                                                            <a href="javascript:void(0)"
-                                                                               class="quickview-link quick-view engoj-btn-quickview"><i
-                                                                                        class="fa fa-search"
-                                                                                        aria-hidden="true"></i></a>
-                                                                        </div>
-                                                                        <div class="product-info">
-                                                                            <h3 class="product-title"><a
-                                                                                        href="/collections/all/products/copy-of-apetito-pure-fruit-juice">Aurore
-                                                                                    Grape</a></h3>
-                                                                            <div class="product-price">
-
-
-                                                                                <del class="silver"><span><span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$86.00"
-                                                                                                data-currency-inr="Rs. 5,580.36"
-                                                                                                data-currency="INR">Rs. 5,580.36</span></span>
-                                                                                </del>
-
-
-                                                                                <ins class="color"><span><span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$34.00"
-                                                                                                data-currency-inr="Rs. 2,206.19"
-                                                                                                data-currency="INR">Rs. 2,206.19</span></span>
-                                                                                </ins>
-
-
-                                                                            </div>
-                                                                            <div class="product-rate">
-                <span class="spr-badge" id="spr_badge_590732623914" data-rating="0.0"><span
-                            class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i></span><span class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                    <div class="item-wg-product table">
-                                                                        <div class="product-thumb">
-                                                                            <a href="/products/aurore-grape"
-                                                                               class="product-thumb-link zoom-thumb">
-                                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_04_c7d068d0-1827-43ba-ade8-58689d9fc4da_grande.jpg?v=1513649329"
-                                                                                     alt="Aurore Grape">
-                                                                            </a>
-                                                                            <a href="javascript:void(0)"
-                                                                               class="quickview-link quick-view engoj-btn-quickview"><i
-                                                                                        class="fa fa-search"
-                                                                                        aria-hidden="true"></i></a>
-                                                                        </div>
-                                                                        <div class="product-info">
-                                                                            <h3 class="product-title"><a
-                                                                                        href="/collections/all/products/aurore-grape">Aurore
-                                                                                    Grape</a></h3>
-                                                                            <div class="product-price">
-
-
-                                                                                <ins class="color"><span><span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$456.00"
-                                                                                                data-currency-inr="Rs. 29,588.87"
-                                                                                                data-currency="INR">Rs. 29,588.87</span></span>
-                                                                                </ins>
-
-
-                                                                            </div>
-                                                                            <div class="product-rate">
-                <span class="spr-badge" id="spr_badge_590742388778" data-rating="0.0"><span
-                            class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i></span><span class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                    <div class="item-wg-product table">
-                                                                        <div class="product-thumb">
-                                                                            <a href="/products/copy-of-fresh-meal-kit"
-                                                                               class="product-thumb-link zoom-thumb">
-                                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_02_eb1e2d21-aed7-475e-9621-a5941c2b191a_grande.jpg?v=1514257282"
-                                                                                     alt="Apetito Pure Fruit Juice">
-                                                                            </a>
-                                                                            <a href="javascript:void(0)"
-                                                                               class="quickview-link quick-view engoj-btn-quickview"><i
-                                                                                        class="fa fa-search"
-                                                                                        aria-hidden="true"></i></a>
-                                                                        </div>
-                                                                        <div class="product-info">
-                                                                            <h3 class="product-title"><a
-                                                                                        href="/collections/all/products/copy-of-fresh-meal-kit">Apetito
-                                                                                    Pure Fruit Juice</a></h3>
-                                                                            <div class="product-price">
-
-
-                                                                                <del class="silver"><span><span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$489.00"
-                                                                                                data-currency-inr="Rs. 31,730.17"
-                                                                                                data-currency="INR">Rs. 31,730.17</span></span>
-                                                                                </del>
-
-
-                                                                                <ins class="color"><span><span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$199.00"
-                                                                                                data-currency-inr="Rs. 12,912.69"
-                                                                                                data-currency="INR">Rs. 12,912.69</span></span>
-                                                                                </ins>
-
-
-                                                                            </div>
-                                                                            <div class="product-rate">
-                <span class="spr-badge" id="spr_badge_590668988458" data-rating="0.0"><span
-                            class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i></span><span class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                    <div class="item-wg-product table">
-                                                                        <div class="product-thumb">
-                                                                            <a href="/products/fresh-meal-kit-1"
-                                                                               class="product-thumb-link zoom-thumb">
-                                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_03_1ff0c82d-946b-41aa-a0ad-50083ef2607e_grande.jpg?v=1513649300"
-                                                                                     alt="Fresh Meal Kit">
-                                                                            </a>
-                                                                            <a href="javascript:void(0)"
-                                                                               class="quickview-link quick-view engoj-btn-quickview"><i
-                                                                                        class="fa fa-search"
-                                                                                        aria-hidden="true"></i></a>
-                                                                        </div>
-                                                                        <div class="product-info">
-                                                                            <h3 class="product-title"><a
-                                                                                        href="/collections/all/products/fresh-meal-kit-1">Fresh
-                                                                                    Meal Kit</a></h3>
-                                                                            <div class="product-price">
-
-
-                                                                                <ins class="color"><span><span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$456.00"
-                                                                                                data-currency-inr="Rs. 29,588.87"
-                                                                                                data-currency="INR">Rs. 29,588.87</span></span>
-                                                                                </ins>
-
-
-                                                                            </div>
-                                                                            <div class="product-rate">
-                <span class="spr-badge" id="spr_badge_590739341354" data-rating="0.0"><span
-                            class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i></span><span class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="owl-item" style="width: 300px;">
-                                                                <div class="item">
-
-
-                                                                    <div class="item-wg-product table">
-                                                                        <div class="product-thumb">
-                                                                            <a href="/products/fresh-meal-kit"
-                                                                               class="product-thumb-link zoom-thumb">
-                                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_01_grande.jpg?v=1513648032"
-                                                                                     alt="Fresh Meal Kit">
-                                                                            </a>
-                                                                            <a href="javascript:void(0)"
-                                                                               class="quickview-link quick-view engoj-btn-quickview"><i
-                                                                                        class="fa fa-search"
-                                                                                        aria-hidden="true"></i></a>
-                                                                        </div>
-                                                                        <div class="product-info">
-                                                                            <h3 class="product-title"><a
-                                                                                        href="/collections/all/products/fresh-meal-kit">Fresh
-                                                                                    Meal Kit</a></h3>
-                                                                            <div class="product-price">
-
-
-                                                                                <ins class="color"><span><span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$0.00"
-                                                                                                data-currency-inr="Rs. 0.00"
-                                                                                                data-currency="INR">Rs. 0.00</span></span>
-                                                                                </ins>
-
-
-                                                                            </div>
-                                                                            <div class="product-rate">
-                <span class="spr-badge" id="spr_badge_590639792170" data-rating="0.0"><span
-                            class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i></span><span class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                    <div class="item-wg-product table">
-                                                                        <div class="product-thumb">
-                                                                            <a href="/products/aurore-grape-2"
-                                                                               class="product-thumb-link zoom-thumb">
-                                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_10_87bc3dfd-64c6-4ad2-b12f-3f5df9c1e8cf_grande.jpg?v=1513650005"
-                                                                                     alt="Aurore Grape">
-                                                                            </a>
-                                                                            <a href="javascript:void(0)"
-                                                                               class="quickview-link quick-view engoj-btn-quickview"><i
-                                                                                        class="fa fa-search"
-                                                                                        aria-hidden="true"></i></a>
-                                                                        </div>
-                                                                        <div class="product-info">
-                                                                            <h3 class="product-title"><a
-                                                                                        href="/collections/all/products/aurore-grape-2">Aurore
-                                                                                    Grape</a></h3>
-                                                                            <div class="product-price">
-
-
-                                                                                <del class="silver"><span><span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$200.00"
-                                                                                                data-currency-inr="Rs. 12,977.57"
-                                                                                                data-currency="INR">Rs. 12,977.57</span></span>
-                                                                                </del>
-
-
-                                                                                <ins class="color"><span>From <span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$156.00"
-                                                                                                data-currency-inr="Rs. 10,122.51"
-                                                                                                data-currency="INR">Rs. 10,122.51</span></span>
-                                                                                </ins>
-
-                                                                            </div>
-                                                                            <div class="product-rate">
-                <span class="spr-badge" id="spr_badge_590814674986" data-rating="0.0"><span
-                            class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i></span><span class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                    <div class="item-wg-product table">
-                                                                        <div class="product-thumb">
-                                                                            <a href="/products/aurore-grape-1"
-                                                                               class="product-thumb-link zoom-thumb">
-                                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_11_grande.jpg?v=1513649954"
-                                                                                     alt="Aurore Grape">
-                                                                            </a>
-                                                                            <a href="javascript:void(0)"
-                                                                               class="quickview-link quick-view engoj-btn-quickview"><i
-                                                                                        class="fa fa-search"
-                                                                                        aria-hidden="true"></i></a>
-                                                                        </div>
-                                                                        <div class="product-info">
-                                                                            <h3 class="product-title"><a
-                                                                                        href="/collections/all/products/aurore-grape-1">Aurore
-                                                                                    Grape</a></h3>
-                                                                            <div class="product-price">
-
-
-                                                                                <ins class="color"><span><span
-                                                                                                class="money"
-                                                                                                data-currency-usd="$456.00"
-                                                                                                data-currency-inr="Rs. 29,588.87"
-                                                                                                data-currency="INR">Rs. 29,588.87</span></span>
-                                                                                </ins>
-
-
-                                                                            </div>
-                                                                            <div class="product-rate">
-                <span class="spr-badge" id="spr_badge_590794948650" data-rating="0.0"><span
-                            class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i><i
-                                class="spr-icon spr-icon-star-empty"></i></span><span class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <!-- End Item -->
-                                                    <div class="owl-controls clickable" style="display: block;">
-                                                        <div class="owl-buttons">
-                                                            <div class="owl-prev"><i
-                                                                        class="icon ion-ios-arrow-thin-left"></i></div>
-                                                            <div class="owl-next"><i
-                                                                        class="icon ion-ios-arrow-thin-right"></i></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- End WIdget -->
 
                                 </aside>
 
@@ -572,7 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <!-- /snippets/collection-sorting.liquid -->
                                     <div class="shop-pagibar clearfix">
                                         <p class="desc silver pull-left">
-                                            showing 1 -
+                                            Showing 1 -
                                             8
                                             of 8 products</p>
                                         <ul class="wrap-sort-view list-inline-block pull-right">
@@ -646,46 +234,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <div id="tabs-grid" class="product-grid-view ">
                                             <div class="row">
 
-
-                                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                                <?php
+                                                $output = "";
+                                                foreach ($items as $item) {
+                                                    $output .= '<div class="col-md-4 col-sm-6 col-xs-6">
                                                     <div class="item-product item-product-grid text-center">
                                                         <div class="product-thumb">
 
-                                                            <a href="/collections/all/products/fresh-meal-kit-1"
+                                                            <a href="#"
                                                                class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_03_1ff0c82d-946b-41aa-a0ad-50083ef2607e_grande.jpg?v=1513649300"
-                                                                     alt="Fresh Meal Kit">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_05_4474dc59-fc3b-47e7-a470-00eeed6ce665_grande.jpg?v=1513649300"
-                                                                     alt="Fresh Meal Kit">
-
-
+                                                                <img src="/theme/assets/images/'.$item['images'].'"
+                                                                     >
+                                                                <img src="/theme/assets/images/'.$item['images'].'"
+                                                                     >
                                                             </a>
-
                                                         </div>
                                                         <div class="product-info">
                                                             <h3 class="product-title"><a
-                                                                        href="/collections/all/products/fresh-meal-kit-1">Fresh
-                                                                    Meal Kit</a></h3>
+                                                                        href="#">'.$item['name'].'</a></h3>
                                                             <div class="product-price">
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$456.00"
-                                                                                               data-currency-inr="Rs. 29,588.87"
-                                                                                               data-currency="INR">Rs. 29,588.87</span></span>
+                                                                <ins class="color"><span>
+                                                                <span class="money" data-currency="INR">Rs. '.$item['cost'].'</span></span>
                                                                 </ins>
-
-
                                                             </div>
                                                             <div class="product-rate">
 													 <span class="spr-badge" id="spr_badge_590739341354"
                                                            data-rating="0.0"><span
                                                                  class="spr-starrating spr-badge-starrating"><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
+                                                                     class="spr-icon spr-icon-star" style="color: goldenrod;"></i><i
+                                                                     class="spr-icon spr-icon-star" style="color: goldenrod;"></i><i
+                                                                     class="spr-icon spr-icon-star" style="color: goldenrod;"></i><i
                                                                      class="spr-icon spr-icon-star-empty"></i><i
                                                                      class="spr-icon spr-icon-star-empty"></i></span><span
                                                                  class="spr-badge-caption">No reviews</span>
@@ -697,7 +275,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                                                 <a href="/account/login" class="wishlist-link"><i
                                                                             class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
+                                                                            aria-hidden="true"></i><span>Wishlist</span></a>
 
 
                                                                 <form method="post" action="/cart/add">
@@ -718,557 +296,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-
-
-                                                <div class="col-md-4 col-sm-6 col-xs-6">
-                                                    <div class="item-product item-product-grid text-center">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/dfsd"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_31_grande.jpg?v=1515125720"
-                                                                     alt="dfsd">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_31_grande.jpg?v=1515125720"
-                                                                     alt="dfsd">
-
-
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/dfsd">dfsd</a>
-                                                            </h3>
-                                                            <div class="product-price">
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$5.99"
-                                                                                               data-currency-inr="Rs. 388.68"
-                                                                                               data-currency="INR">Rs. 388.68</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													 <span class="spr-badge" id="spr_badge_703337070634"
-                                                           data-rating="0.0"><span
-                                                                 class="spr-starrating spr-badge-starrating"><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                 class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <form method="post" action="/cart/add">
-                                                                    <input type="hidden" name="id"
-                                                                           value="8805147705386">
-                                                                    <button type="submit" name="add"
-                                                                            id="AddToCart703337070634"
-                                                                            class="addcart-link add-to-cart-button enj-add-to-cart-btn"
-                                                                            title="Add to Cart">
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </form>
-
-
-                                                                <a href="javascript:void(0)" data-id="dfsd"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="col-md-4 col-sm-6 col-xs-6">
-                                                    <div class="item-product item-product-grid text-center">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/aurore-grape-1"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_11_grande.jpg?v=1513649954"
-                                                                     alt="Aurore Grape">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_10_grande.jpg?v=1513649954"
-                                                                     alt="Aurore Grape">
-
-
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/aurore-grape-1">Aurore
-                                                                    Grape</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$456.00"
-                                                                                               data-currency-inr="Rs. 29,588.87"
-                                                                                               data-currency="INR">Rs. 29,588.87</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													 <span class="spr-badge" id="spr_badge_590794948650"
-                                                           data-rating="0.0"><span
-                                                                 class="spr-starrating spr-badge-starrating"><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                 class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <form method="post" action="/cart/add">
-                                                                    <input type="hidden" name="id"
-                                                                           value="7948943589418">
-                                                                    <button type="submit" name="add"
-                                                                            id="AddToCart590794948650"
-                                                                            class="addcart-link add-to-cart-button enj-add-to-cart-btn"
-                                                                            title="Add to Cart">
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </form>
-
-
-                                                                <a href="javascript:void(0)" data-id="aurore-grape-1"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="col-md-4 col-sm-6 col-xs-6">
-                                                    <div class="item-product item-product-grid text-center">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/aurore-grape"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_04_c7d068d0-1827-43ba-ade8-58689d9fc4da_grande.jpg?v=1513649329"
-                                                                     alt="Aurore Grape">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_07_grande.jpg?v=1513649339"
-                                                                     alt="Aurore Grape">
-
-
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/aurore-grape">Aurore
-                                                                    Grape</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$456.00"
-                                                                                               data-currency-inr="Rs. 29,588.87"
-                                                                                               data-currency="INR">Rs. 29,588.87</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													 <span class="spr-badge" id="spr_badge_590742388778"
-                                                           data-rating="0.0"><span
-                                                                 class="spr-starrating spr-badge-starrating"><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                 class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <form method="post" action="/cart/add">
-                                                                    <input type="hidden" name="id"
-                                                                           value="7948577865770">
-                                                                    <button type="submit" name="add"
-                                                                            id="AddToCart590742388778"
-                                                                            class="addcart-link add-to-cart-button enj-add-to-cart-btn"
-                                                                            title="Add to Cart">
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </form>
-
-
-                                                                <a href="javascript:void(0)" data-id="aurore-grape"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="col-md-4 col-sm-6 col-xs-6">
-                                                    <div class="item-product item-product-grid text-center">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/aurore-grape-2"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_10_87bc3dfd-64c6-4ad2-b12f-3f5df9c1e8cf_grande.jpg?v=1513650005"
-                                                                     alt="Aurore Grape">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_13_grande.jpg?v=1513650023"
-                                                                     alt="Aurore Grape">
-
-
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/aurore-grape-2">Aurore
-                                                                    Grape</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <del class="silver"><span><span class="money"
-                                                                                                data-currency-usd="$200.00"
-                                                                                                data-currency-inr="Rs. 12,977.57"
-                                                                                                data-currency="INR">Rs. 12,977.57</span></span>
-                                                                </del>
-
-
-                                                                <ins class="color"><span>From <span class="money"
-                                                                                                    data-currency-usd="$156.00"
-                                                                                                    data-currency-inr="Rs. 10,122.51"
-                                                                                                    data-currency="INR">Rs. 10,122.51</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													 <span class="spr-badge" id="spr_badge_590814674986"
-                                                           data-rating="0.0"><span
-                                                                 class="spr-starrating spr-badge-starrating"><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                 class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <a class="addcart-link"
-                                                                   href="/collections/all/products/aurore-grape-2"
-                                                                   title="Select Option">
-                                                                    Select Option
-                                                                </a>
-
-
-                                                                <a href="javascript:void(0)" data-id="aurore-grape-2"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="col-md-4 col-sm-6 col-xs-6">
-                                                    <div class="item-product item-product-grid text-center">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/fresh-meal-kit"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_01_grande.jpg?v=1513648032"
-                                                                     alt="Fresh Meal Kit">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_04_grande.jpg?v=1513648034"
-                                                                     alt="Fresh Meal Kit">
-
-
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/fresh-meal-kit">Fresh
-                                                                    Meal Kit</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$0.00"
-                                                                                               data-currency-inr="Rs. 0.00"
-                                                                                               data-currency="INR">Rs. 0.00</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													 <span class="spr-badge" id="spr_badge_590639792170"
-                                                           data-rating="0.0"><span
-                                                                 class="spr-starrating spr-badge-starrating"><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                 class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <form method="post" action="/cart/add">
-                                                                    <input type="hidden" name="id"
-                                                                           value="7947819647018">
-                                                                    <button type="submit" name="add"
-                                                                            id="AddToCart590639792170"
-                                                                            class="addcart-link add-to-cart-button enj-add-to-cart-btn"
-                                                                            title="Add to Cart">
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </form>
-
-
-                                                                <a href="javascript:void(0)" data-id="fresh-meal-kit"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="col-md-4 col-sm-6 col-xs-6">
-                                                    <div class="item-product item-product-grid text-center">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/copy-of-apetito-pure-fruit-juice"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_06_grande.jpg?v=1514257231"
-                                                                     alt="Aurore Grape">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_04_a40f1942-05bc-4129-bdd6-b157888d8956_grande.jpg?v=1514257231"
-                                                                     alt="Aurore Grape">
-
-
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/copy-of-apetito-pure-fruit-juice">Aurore
-                                                                    Grape</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <del class="silver"><span><span class="money"
-                                                                                                data-currency-usd="$86.00"
-                                                                                                data-currency-inr="Rs. 5,580.36"
-                                                                                                data-currency="INR">Rs. 5,580.36</span></span>
-                                                                </del>
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$34.00"
-                                                                                               data-currency-inr="Rs. 2,206.19"
-                                                                                               data-currency="INR">Rs. 2,206.19</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													 <span class="spr-badge" id="spr_badge_590732623914"
-                                                           data-rating="0.0"><span
-                                                                 class="spr-starrating spr-badge-starrating"><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                 class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <a class="addcart-link"
-                                                                   href="/collections/all/products/copy-of-apetito-pure-fruit-juice"
-                                                                   title="sold out">
-                                                                    Sold out
-                                                                </a>
-
-                                                                <a href="javascript:void(0)"
-                                                                   data-id="copy-of-apetito-pure-fruit-juice"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="col-md-4 col-sm-6 col-xs-6">
-                                                    <div class="item-product item-product-grid text-center">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/copy-of-fresh-meal-kit"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_02_eb1e2d21-aed7-475e-9621-a5941c2b191a_grande.jpg?v=1514257282"
-                                                                     alt="Apetito Pure Fruit Juice">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_02_eb1e2d21-aed7-475e-9621-a5941c2b191a_grande.jpg?v=1514257282"
-                                                                     alt="Apetito Pure Fruit Juice">
-
-
-                                                            </a>
-
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/copy-of-fresh-meal-kit">Apetito
-                                                                    Pure Fruit Juice</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <del class="silver"><span><span class="money"
-                                                                                                data-currency-usd="$489.00"
-                                                                                                data-currency-inr="Rs. 31,730.17"
-                                                                                                data-currency="INR">Rs. 31,730.17</span></span>
-                                                                </del>
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$199.00"
-                                                                                               data-currency-inr="Rs. 12,912.69"
-                                                                                               data-currency="INR">Rs. 12,912.69</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													 <span class="spr-badge" id="spr_badge_590668988458"
-                                                           data-rating="0.0"><span
-                                                                 class="spr-starrating spr-badge-starrating"><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i><i
-                                                                     class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                 class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <form method="post" action="/cart/add">
-                                                                    <input type="hidden" name="id"
-                                                                           value="7947988172842">
-                                                                    <button type="submit" name="add"
-                                                                            id="AddToCart590668988458"
-                                                                            class="addcart-link add-to-cart-button enj-add-to-cart-btn"
-                                                                            title="Add to Cart">
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </form>
-
-
-                                                                <a href="javascript:void(0)"
-                                                                   data-id="copy-of-fresh-meal-kit"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                </div>';
+                                                }
+                                                echo $output;
+                                                ?>
 
                                             </div>
                                         </div>
                                         <div id="tabs-list" class="product-list-view " style="display:none;">
 
-
+                                        <?php
+                                        $output = "";
+                                        foreach ($items as $item) {
+                                            $output .= '
                                             <div class="item-product item-product-list">
 
                                                 <div class="row">
                                                     <div class="col-md-4 col-sm-5 col-xs-5">
                                                         <div class="product-thumb">
 
-                                                            <a href="/collections/all/products/fresh-meal-kit-1"
+                                                            <a href="#"
                                                                class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_03_1ff0c82d-946b-41aa-a0ad-50083ef2607e_grande.jpg?v=1513649300"
-                                                                     alt="Fresh Meal Kit">
+                                                                <img src="/theme/assets/images/' . $item['images'] . '"
+                                                                     >
 
 
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_05_4474dc59-fc3b-47e7-a470-00eeed6ce665_grande.jpg?v=1513649300"
-                                                                     alt="Fresh Meal Kit">
+                                                                <img src="/theme/assets/images/' . $item['images'] . '"
+                                                                     >
 
 
                                                             </a>
@@ -1277,15 +331,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="col-md-8 col-sm-7 col-xs-7">
                                                         <div class="product-info">
                                                             <h3 class="product-title"><a
-                                                                        href="/collections/all/products/fresh-meal-kit-1">Fresh
-                                                                    Meal Kit</a></h3>
+                                                                        href="#">' . $item['name'] . '</a></h3>
                                                             <div class="product-price">
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$456.00"
-                                                                                               data-currency-inr="Rs. 29,588.87"
-                                                                                               data-currency="INR">Rs. 29,588.87</span></span>
+                                                                <ins class="color"><span>
+                                                                <span class="money"
+                                                                 data-currency="INR">Rs. ' . $item['cost'] . '</span></span>
                                                                 </ins>
 
 
@@ -1294,19 +344,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 													<span class="spr-badge" id="spr_badge_590739341354"
                                                           data-rating="0.0"><span
                                                                 class="spr-starrating spr-badge-starrating"><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
+                                                                    class="spr-icon spr-icon-star" style="color: goldenrod;"></i><i
+                                                                    class="spr-icon spr-icon-star" style="color: goldenrod;"></i><i
+                                                                    class="spr-icon spr-icon-star" style="color: goldenrod;"></i><i
                                                                     class="spr-icon spr-icon-star-empty"></i><i
                                                                     class="spr-icon spr-icon-star-empty"></i></span><span
                                                                 class="spr-badge-caption">No reviews</span>
 </span>
 
                                                             </div>
-                                                            <div class="desc">Lorem ipsum dolor sit amet, consectetur
-                                                                adipiscing elit. Mauris vel maximus lacus. Duis ut
-                                                                mauris eget justo dictum tempus sed vel tellus.
-                                                                Vestibul...
+                                                            <div class="desc">' . $item['description'] . '
                                                             </div>
                                                             <div class="product-extra-link">
 
@@ -1335,600 +382,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-
-
-                                            <div class="item-product item-product-list">
-
-                                                <div class="row">
-                                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/dfsd"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_31_grande.jpg?v=1515125720"
-                                                                     alt="dfsd">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_31_grande.jpg?v=1515125720"
-                                                                     alt="dfsd">
-
-
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/dfsd">dfsd</a>
-                                                            </h3>
-                                                            <div class="product-price">
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$5.99"
-                                                                                               data-currency-inr="Rs. 388.68"
-                                                                                               data-currency="INR">Rs. 388.68</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													<span class="spr-badge" id="spr_badge_703337070634"
-                                                          data-rating="0.0"><span
-                                                                class="spr-starrating spr-badge-starrating"><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="desc">Organic food consumption is rapidly
-                                                                increasing. The heightened interest in the global
-                                                                environment and a willingness to look
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <form method="post" action="/cart/add">
-                                                                    <input type="hidden" name="id"
-                                                                           value="8805147705386">
-                                                                    <button type="submit" name="add"
-                                                                            id="AddToCart703337070634"
-                                                                            class="addcart-link add-to-cart-button enj-add-to-cart-btn"
-                                                                            title="Add to Cart">
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </form>
-
-
-                                                                <a href="javascript:void(0)" data-id="dfsd"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="item-product item-product-list">
-
-                                                <div class="row">
-                                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/aurore-grape-1"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_11_grande.jpg?v=1513649954"
-                                                                     alt="Aurore Grape">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_10_grande.jpg?v=1513649954"
-                                                                     alt="Aurore Grape">
-
-
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/aurore-grape-1">Aurore
-                                                                    Grape</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$456.00"
-                                                                                               data-currency-inr="Rs. 29,588.87"
-                                                                                               data-currency="INR">Rs. 29,588.87</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													<span class="spr-badge" id="spr_badge_590794948650"
-                                                          data-rating="0.0"><span
-                                                                class="spr-starrating spr-badge-starrating"><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="desc">Lorem ipsum dolor sit amet, consectetur
-                                                                adipiscing elit. Mauris vel maximus lacus. Duis ut
-                                                                mauris eget justo dictum tempus sed vel tellus.
-                                                                Vestibul...
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <form method="post" action="/cart/add">
-                                                                    <input type="hidden" name="id"
-                                                                           value="7948943589418">
-                                                                    <button type="submit" name="add"
-                                                                            id="AddToCart590794948650"
-                                                                            class="addcart-link add-to-cart-button enj-add-to-cart-btn"
-                                                                            title="Add to Cart">
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </form>
-
-
-                                                                <a href="javascript:void(0)" data-id="aurore-grape-1"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="item-product item-product-list">
-
-                                                <div class="row">
-                                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/aurore-grape"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_04_c7d068d0-1827-43ba-ade8-58689d9fc4da_grande.jpg?v=1513649329"
-                                                                     alt="Aurore Grape">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_07_grande.jpg?v=1513649339"
-                                                                     alt="Aurore Grape">
-
-
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/aurore-grape">Aurore
-                                                                    Grape</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$456.00"
-                                                                                               data-currency-inr="Rs. 29,588.87"
-                                                                                               data-currency="INR">Rs. 29,588.87</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													<span class="spr-badge" id="spr_badge_590742388778"
-                                                          data-rating="0.0"><span
-                                                                class="spr-starrating spr-badge-starrating"><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="desc">Lorem ipsum dolor sit amet, consectetur
-                                                                adipiscing elit. Mauris vel maximus lacus. Duis ut
-                                                                mauris eget justo dictum tempus sed vel tellus.
-                                                                Vestibul...
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <form method="post" action="/cart/add">
-                                                                    <input type="hidden" name="id"
-                                                                           value="7948577865770">
-                                                                    <button type="submit" name="add"
-                                                                            id="AddToCart590742388778"
-                                                                            class="addcart-link add-to-cart-button enj-add-to-cart-btn"
-                                                                            title="Add to Cart">
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </form>
-
-
-                                                                <a href="javascript:void(0)" data-id="aurore-grape"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="item-product item-product-list">
-
-                                                <div class="row">
-                                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/aurore-grape-2"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_10_87bc3dfd-64c6-4ad2-b12f-3f5df9c1e8cf_grande.jpg?v=1513650005"
-                                                                     alt="Aurore Grape">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_13_grande.jpg?v=1513650023"
-                                                                     alt="Aurore Grape">
-
-
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/aurore-grape-2">Aurore
-                                                                    Grape</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <del class="silver"><span><span class="money"
-                                                                                                data-currency-usd="$200.00"
-                                                                                                data-currency-inr="Rs. 12,977.57"
-                                                                                                data-currency="INR">Rs. 12,977.57</span></span>
-                                                                </del>
-
-
-                                                                <ins class="color"><span>From <span class="money"
-                                                                                                    data-currency-usd="$156.00"
-                                                                                                    data-currency-inr="Rs. 10,122.51"
-                                                                                                    data-currency="INR">Rs. 10,122.51</span></span>
-                                                                </ins>
-
-                                                            </div>
-                                                            <div class="product-rate">
-													<span class="spr-badge" id="spr_badge_590814674986"
-                                                          data-rating="0.0"><span
-                                                                class="spr-starrating spr-badge-starrating"><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="desc">Lorem ipsum dolor sit amet, consectetur
-                                                                adipiscing elit. Mauris vel maximus lacus. Duis ut
-                                                                mauris eget justo dictum tempus sed vel tellus.
-                                                                Vestibul...
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <a class="addcart-link"
-                                                                   href="/collections/all/products/aurore-grape-2"
-                                                                   title="Select Option">
-                                                                    Select Option
-                                                                </a>
-
-
-                                                                <a href="javascript:void(0)" data-id="aurore-grape-2"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="item-product item-product-list">
-
-                                                <div class="row">
-                                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/fresh-meal-kit"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_01_grande.jpg?v=1513648032"
-                                                                     alt="Fresh Meal Kit">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_04_grande.jpg?v=1513648034"
-                                                                     alt="Fresh Meal Kit">
-
-
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/fresh-meal-kit">Fresh
-                                                                    Meal Kit</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$0.00"
-                                                                                               data-currency-inr="Rs. 0.00"
-                                                                                               data-currency="INR">Rs. 0.00</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													<span class="spr-badge" id="spr_badge_590639792170"
-                                                          data-rating="0.0"><span
-                                                                class="spr-starrating spr-badge-starrating"><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="desc">Lorem ipsum dolor sit amet, consectetur
-                                                                adipiscing elit. Mauris vel maximus lacus. Duis ut
-                                                                mauris eget justo dictum tempus sed vel tellus.
-                                                                Vestibul...
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <form method="post" action="/cart/add">
-                                                                    <input type="hidden" name="id"
-                                                                           value="7947819647018">
-                                                                    <button type="submit" name="add"
-                                                                            id="AddToCart590639792170"
-                                                                            class="addcart-link add-to-cart-button enj-add-to-cart-btn"
-                                                                            title="Add to Cart">
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </form>
-
-
-                                                                <a href="javascript:void(0)" data-id="fresh-meal-kit"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="item-product item-product-list">
-
-                                                <div class="row">
-                                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/copy-of-apetito-pure-fruit-juice"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_06_grande.jpg?v=1514257231"
-                                                                     alt="Aurore Grape">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_04_a40f1942-05bc-4129-bdd6-b157888d8956_grande.jpg?v=1514257231"
-                                                                     alt="Aurore Grape">
-
-
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/copy-of-apetito-pure-fruit-juice">Aurore
-                                                                    Grape</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <del class="silver"><span><span class="money"
-                                                                                                data-currency-usd="$86.00"
-                                                                                                data-currency-inr="Rs. 5,580.36"
-                                                                                                data-currency="INR">Rs. 5,580.36</span></span>
-                                                                </del>
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$34.00"
-                                                                                               data-currency-inr="Rs. 2,206.19"
-                                                                                               data-currency="INR">Rs. 2,206.19</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													<span class="spr-badge" id="spr_badge_590732623914"
-                                                          data-rating="0.0"><span
-                                                                class="spr-starrating spr-badge-starrating"><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="desc">Lorem ipsum dolor sit amet, consectetur
-                                                                adipiscing elit. Mauris vel maximus lacus. Duis ut
-                                                                mauris eget justo dictum tempus sed vel tellus.
-                                                                Vestibul...
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <a class="addcart-link"
-                                                                   href="/collections/all/products/copy-of-apetito-pure-fruit-juice"
-                                                                   title="sold out">
-                                                                    Sold out
-                                                                </a>
-
-                                                                <a href="javascript:void(0)"
-                                                                   data-id="copy-of-apetito-pure-fruit-juice"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="item-product item-product-list">
-
-                                                <div class="row">
-                                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                                        <div class="product-thumb">
-
-                                                            <a href="/collections/all/products/copy-of-fresh-meal-kit"
-                                                               class="product-thumb-link rotate-thumb">
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_02_eb1e2d21-aed7-475e-9621-a5941c2b191a_grande.jpg?v=1514257282"
-                                                                     alt="Apetito Pure Fruit Juice">
-
-
-                                                                <img src="//cdn.shopify.com/s/files/1/2644/1682/products/fruit_02_eb1e2d21-aed7-475e-9621-a5941c2b191a_grande.jpg?v=1514257282"
-                                                                     alt="Apetito Pure Fruit Juice">
-
-
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                                        <div class="product-info">
-                                                            <h3 class="product-title"><a
-                                                                        href="/collections/all/products/copy-of-fresh-meal-kit">Apetito
-                                                                    Pure Fruit Juice</a></h3>
-                                                            <div class="product-price">
-
-
-                                                                <del class="silver"><span><span class="money"
-                                                                                                data-currency-usd="$489.00"
-                                                                                                data-currency-inr="Rs. 31,730.17"
-                                                                                                data-currency="INR">Rs. 31,730.17</span></span>
-                                                                </del>
-
-
-                                                                <ins class="color"><span><span class="money"
-                                                                                               data-currency-usd="$199.00"
-                                                                                               data-currency-inr="Rs. 12,912.69"
-                                                                                               data-currency="INR">Rs. 12,912.69</span></span>
-                                                                </ins>
-
-
-                                                            </div>
-                                                            <div class="product-rate">
-													<span class="spr-badge" id="spr_badge_590668988458"
-                                                          data-rating="0.0"><span
-                                                                class="spr-starrating spr-badge-starrating"><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i><i
-                                                                    class="spr-icon spr-icon-star-empty"></i></span><span
-                                                                class="spr-badge-caption">No reviews</span>
-</span>
-
-                                                            </div>
-                                                            <div class="desc">Lorem ipsum dolor sit amet, consectetur
-                                                                adipiscing elit. Mauris vel maximus lacus. Duis ut
-                                                                mauris eget justo dictum tempus sed vel tellus.
-                                                                Vestibul...
-                                                            </div>
-                                                            <div class="product-extra-link">
-
-
-                                                                <a href="/account/login" class="wishlist-link"><i
-                                                                            class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i><span>wishlist</span></a>
-
-
-                                                                <form method="post" action="/cart/add">
-                                                                    <input type="hidden" name="id"
-                                                                           value="7947988172842">
-                                                                    <button type="submit" name="add"
-                                                                            id="AddToCart590668988458"
-                                                                            class="addcart-link add-to-cart-button enj-add-to-cart-btn"
-                                                                            title="Add to Cart">
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </form>
-
-
-                                                                <a href="javascript:void(0)"
-                                                                   data-id="copy-of-fresh-meal-kit"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
+                                            </div>';
+                                        }
+                                            echo $output;
+                                            ?>
                                         </div>
                                     </div>
 
@@ -1947,7 +404,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <?php include("theme/include/footer.php");
-echo get_script();?>
+echo get_script(); ?>
 
 </body>
 </html>
