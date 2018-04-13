@@ -5442,21 +5442,21 @@ body .shop-button {
 }
 
 .view-bar .grid-view {
-    background-image: url(icon-grid.png);
+    background-image: url(https://cdn.shopify.com/s/files/1/2644/1682/t/27/assets/icon-grid.png);
     border-radius: 6px 0 0 6px;
 }
 
 .view-bar .list-view {
-    background-image: url(icon-list.png);
+    background-image: url(https://cdn.shopify.com/s/files/1/2644/1682/t/27/assets/icon-list.png);
     border-radius: 0 6px 6px 0;
 }
 
 .view-bar .grid-view.active {
-    background-image: url(icon-grid-active.png);
+    background-image: url(https://cdn.shopify.com/s/files/1/2644/1682/t/27/assets/icon-grid-active.png);
 }
 
 .view-bar .list-view.active {
-    background-image: url(icon-list-active.png);
+    background-image: url(https://cdn.shopify.com/s/files/1/2644/1682/t/27/assets/icon-list-active.png);
 }
 
 .sort-bar span {

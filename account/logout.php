@@ -1,8 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: chitra.p
- * Date: 4/7/2018
- * Time: 3:13 PM
- */
-
+require ('../theme/lib.php');
+setcookie("user", '', time() - (86400 * 30), "/");
+setcookie("username", '', time() - (86400 * 30), "/");
+unset($_SESSION['user']);
+session_destroy();
+redirect("http://uzhavarsandhai.com");

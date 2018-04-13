@@ -1,5 +1,134 @@
 <?php
 
+function get_meta(){
+    $output = '
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#7796A8">
+    <link rel="canonical" href="http://uzhavarsandhai.com/">
+    <link href="/theme/styles/Poppins.css" rel="stylesheet" type="text/css">
+    <link href="/theme/styles/Pacifico.css" rel="stylesheet" type="text/css">
+    <link href="/theme/styles/Poiret-One.css" rel="stylesheet" type="text/css">
+
+    <!-- /snippets/social-meta-tags.liquid -->
+    <meta property="og:site_name" content="Farmer\'s Market Manager">
+    <meta property="og:url" content="http://uzhavarsandhai.com/">
+    <meta property="og:title" content="Farmer\'s Market Manager">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Farmer\'s Market Manager">
+
+
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Farmer\'s Market Manager">
+    <meta name="twitter:description" content="Farmer\'s Market Manager">';
+    return $output;
+}
+function get_styles() {
+    $output = '
+    <link href="/theme/styles/timber.scss.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/theme.scss.css" rel="stylesheet" type="text/css" media="all">
+
+    <!--  css theme  -->
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://cdn.shopify.com/s/files/1/2644/1682/t/27/assets/ionicons.min.css?11789500483909204466" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/jquery-ui.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/owl.transitions.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/owl.theme.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/slick.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/animate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/hover.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/color.scss.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/theme.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/responsive.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/browser.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/custom-color.css" rel="stylesheet" type="text/css" media="all">
+
+    <!--  end  -->
+    <link href="/theme/styles/engo_plugins.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/theme/styles/engo_base.scss.css" rel="stylesheet" type="text/css" media="all">
+
+    <style>
+    .shopify-payment-button__button--hidden {
+            visibility: hidden;
+        }
+
+        .shopify-payment-button__button {
+            border-radius: 4px;
+            border: none;
+            box-shadow: 0 0 0 0 transparent;
+            color: white;
+            cursor: pointer;
+            display: block;
+            font-size: 1em;
+            font-weight: 500;
+            line-height: 1;
+            text-align: center;
+            width: 100%;
+            transition: background 0.2s ease-in-out;
+        }
+
+        .shopify-payment-button__button[disabled] {
+            opacity: 0.6;
+            cursor: default;
+        }
+
+        .shopify-payment-button__button--unbranded {
+            background-color: #1990c6;
+            padding: 1em 2em;
+        }
+
+        .shopify-payment-button__button--unbranded:hover:not([disabled]) {
+            background-color: #136f99;
+        }
+
+        .shopify-payment-button__more-options {
+            background: transparent;
+            border: 0 none;
+            cursor: pointer;
+            display: block;
+            font-size: 1em;
+            margin-top: 1em;
+            text-align: center;
+            width: 100%;
+        }
+
+        .shopify-payment-button__more-options:hover:not([disabled]) {
+            text-decoration: underline;
+        }
+
+        .shopify-payment-button__more-options[disabled] {
+            opacity: 0.6;
+            cursor: default;
+        }
+
+        .shopify-payment-button__button--branded {
+            display: flex;
+            flex-direction: column;
+            min-height: 44px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .shopify-payment-button__button--branded .shopify-cleanslate {
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+    </style>
+    ';
+
+    return $output;
+}
+
 function get_script() {
     $output = '<script id="shopify-features" type="application/json">{"accessToken":"d8773b55f90ebfd5b68c714d3cc4d5ef","betas":["smart-payment-buttons"],"domain":"fruit-demo.myshopify.com","shopId":26441682,"smart_payment_buttons_url":"https:\/\/cdn.shopifycloud.com\/payment-sheet\/assets\/latest\/spb.js"}</script>
 <script>var Shopify = Shopify || {};
@@ -208,4 +337,186 @@ window.ShopifyPay.sheetStyleSheetUrl = "\/\/cdn.shopify.com\/s\/assets\/shared\/
 </script>';
 
     return $output;
+}
+
+// $url should be an absolute url
+function redirect($url){
+    if (headers_sent()){
+        die('<script type="text/javascript">window.location=\''.$url.'\';</script‌​>');
+    }else{
+        header('Location: ' . $url);
+        die();
+    }
+}
+
+function get_header(){
+$header = '
+<div id="shopify-section-header" class="shopify-section">
+    <header id="header">
+        <div class="header header-v5">
+            <div class="top-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <ul class="info-account list-inline-block pull-right">';
+                                if(!(is_null($_SESSION['user']))) {
+                                    $header .= '
+                                    <li><a href="/account/account.php"><span class="color"><i class="fa fa-user-o"></i></span>'.$_COOKIE['username'].'</a></li>
+                                    <li><a href="/account/logout.php"><span class="color"><i class="fa fa-key"></i></span>Log out</a></li>';
+                                    }
+                                else {
+                                    $header .= '<li><a href="/account/login.php"><span class="color2"><i
+                                                    class="fa fa-user-o"></i></span>Log in</a></li>
+                                <li><a href="/account/register.php"><span class="color2"><i
+                                                    class="fa fa-key"></i></span>Register</a></li>';
+                                }
+                            $header .= '</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Header -->
+            <div class="main-header main-header7">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <form class="search-form pull-left" method="get"
+                                  action="#" role="search">
+                                <input type="hidden" name="type" value="product">
+                                <input onblur="if (this.value==&#39;&#39;) this.value = this.defaultValue"
+                                       onfocus="if (this.value==this.defaultValue) this.value = &#39;&#39;"
+                                       value="Search" type="text" name="q">
+                                <input type="submit" value="">
+                            </form>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="logo logo7">
+                                <h1 class="hidden">Farmer\' Market Manager</h1>
+                                <a href="/index.php"><img src="../../theme/assets/images/logo.png"
+                                                                           alt=""
+                                                                           style="max-width:300px;max-height: 115px;margin-top: -25px;"></a>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="mini-cart-box mini-cart1 pull-right">
+                                <a class="mini-cart-link" href="/cart.php">
+                                    <span class="mini-cart-icon title18 color2"><i
+                                                class="fa fa-shopping-basket"></i></span>
+                                    <span class="mini-cart-number"><span class="CartCount">2</span> item - <span
+                                                class="color" id="CartCost"> <span class="money"
+                                                                                   data-currency-usd="$461.99"
+                                                                                   data-currency-inr="Rs. 30,049.11"
+                                                                                   data-currency="INR">Rs. 30,049.11</span></span></span>
+                                </a>
+                                <div class="mini-cart-content text-left" id="CartContainer">
+
+                                    <!--   <h2 class="title18 color">(<span class="CartCount">2</span>) ITEMS IN MY CART</h2> -->
+                                    <div class="list-mini-cart-item">
+
+                                        <div class="product-mini-cart table">
+                                            <div class="product-thumb">
+                                                <a href="#"
+                                                   class="product-thumb-link"><img alt=""
+                                                                                   src="../../theme/assets/images/fruit_small.jpg"></a>
+
+                                            </div>
+                                            <div class="product-info">
+                                                <h3 class="product-title"><a href="#">GUAVA</a>
+                                                </h3>
+                                                <div class="product-price">
+                                                    <ins><span><span class="money" data-currency-usd="$5.99"
+                                                                     data-currency-inr="Rs. 389.61" data-currency="INR">Rs. 389.61</span></span>
+                                                    </ins>
+
+                                                </div>
+                                                <p class="qty">Quantity:1</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-mini-cart table">
+                                            <div class="product-thumb">
+                                                <a href="#"
+                                                   class="product-thumb-link"><img alt=""
+                                                                                   src="../../theme/assets/images/fruit_small.jpg"></a>
+
+                                            </div>
+                                            <div class="product-info">
+                                                <h3 class="product-title"><a href="#">Fresh
+                                                        Meal Kit</a></h3>
+                                                <div class="product-price">
+                                                    <ins><span><span class="money" data-currency-usd="$456.00"
+                                                                     data-currency-inr="Rs. 29,659.50"
+                                                                     data-currency="INR">Rs. 29,659.50</span></span>
+                                                    </ins>
+
+                                                </div>
+                                                <p class="qty">Quantity:1</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="mini-cart-total  clearfix">
+                                        <strong class="pull-left title18">TOTAL</strong>
+                                        <span class="pull-right color title18"><span class="money"
+                                                                                     data-currency-usd="$461.99"
+                                                                                     data-currency-inr="Rs. 30,049.11"
+                                                                                     data-currency="INR">Rs. 30,049.11</span></span>
+                                    </div>
+                                    <div class="mini-cart-button">
+                                        <a class="mini-cart-view shop-button"
+                                           href="/cart.php">View Cart </a>
+                                        <a class="mini-cart-checkout shop-button"
+                                           href="#">Checkout</a>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-header nav-header7 header-ontop">
+                <div class="container">
+                    <nav class="main-nav main-nav1">
+                        <ul>
+                            <li class=""><a href="/index.php">Home</a></li>
+                            <li class=""><a href="/collection.php">Fruits</a></li>
+                            <li class=" menu-item-has-children">
+                                <a href="#">Shop</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/shoplist.php">Shop list</a></li>
+                                    <li><a href="#">Shop grid</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Product Detail</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Detail fullwidth</a></li>
+                                                <li><a href="#">Detail sidebar right</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                  </ul>
+                                </li>
+                                <li class=" menu-item-has-children">
+                                    <a href="#">Latest News</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/latestnews.php">Latest News</a></li>
+                                        <li><a href="#">Blog masonry</a></li>
+                                        <li><a href="#">Blog detail</a></li>
+                                  </ul>
+                                </li>
+                                <li class=""><a href="/aboutus.php">About Us</a></li>
+                                <li class=""><a href="/contact.php">Contact</a></li>
+                            </ul>
+                            <a href="#" class="toggle-mobile-menu"><span></span></a>
+                        </nav>
+                    </div>
+                </div>
+                <!-- End Nav Header -->
+            </div>
+        </header>
+    </div>';
+return $header;
 }
