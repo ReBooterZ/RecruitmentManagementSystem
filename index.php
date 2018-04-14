@@ -71,8 +71,8 @@ $_SESSION['user'] = null;
                                         <div class="item-diet table">
                                             <div class="diet-info text-right">
                                                 <h3 class="title18"><a href="#"
-                                                                       class="black">Kiwi - Canada</a></h3>
-                                                <p class="desc">America's Healthiest Superfoods for Women</p>
+                                                                       class="black">Kiwi</a></h3>
+                                                <p class="desc">Healthiest Superfoods for Women</p>
                                             </div>
                                             <div class="diet-thumb"><a href="#"><img
                                                             src="/theme/assets/images/diet2_2bd6e5d3-de9f-470d-aba2-58f07ebaea47_small.png"
@@ -82,7 +82,7 @@ $_SESSION['user'] = null;
                                             <div class="diet-info text-right">
                                                 <h3 class="title18"><a href="#"
                                                                        class="black">Red Apple</a></h3>
-                                                <p class="desc">3 Yummy Blender Recipes That Will Help You Lose
+                                                <p class="desc">Fresh fruit that helps you to Lose
                                                     Weight</p>
                                             </div>
                                             <div class="diet-thumb"><a href="#"><img
@@ -106,7 +106,7 @@ $_SESSION['user'] = null;
                                                             alt=""></a></div>
                                             <div class="diet-info">
                                                 <h3 class="title18"><a href="#"
-                                                                       class="black">Hand Pain</a></h3>
+                                                                       class="black">Strawberry</a></h3>
                                                 <p class="desc">Best Superfoods for Weight Loss</p>
                                             </div>
                                         </div>
@@ -117,7 +117,7 @@ $_SESSION['user'] = null;
                                             <div class="diet-info">
                                                 <h3 class="title18"><a href="#"
                                                                        class="black">Watermelon</a></h3>
-                                                <p class="desc">America's Healthiest Superfoods for Women</p>
+                                                <p class="desc">Healthiest Superfoods for Women</p>
                                             </div>
                                         </div>
                                         <div class="item-diet table">
@@ -127,8 +127,8 @@ $_SESSION['user'] = null;
                                             <div class="diet-info">
                                                 <h3 class="title18"><a href="#"
                                                                        class="black">Banana</a></h3>
-                                                <p class="desc">3 Yummy Blender Recipes That Will Help You Lose
-                                                    Weight</p>
+                                                <p class="desc">A great dietary source of potassium
+                                                    </p>
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +145,7 @@ $_SESSION['user'] = null;
                     <div class="container">
                         <div class="from-blog2">
                             <h2 class="color2 title30 text-center title-box2 wow zoomIn"
-                                style="visibility: visible; animation-name: zoomIn;">From our blog</h2>
+                                style="visibility: visible; animation-name: zoomIn;">Why Farmer's Market Manager?</h2>
                             <div class="row">
                                 <div class="col-md-4 col-sm-12 col-xs-12">
                                     <div class="item-blog2 wow fadeInUp"
@@ -155,26 +155,20 @@ $_SESSION['user'] = null;
                                                 <div class="banner-adv zoom-image overlay-image">
 
                                                     <a href="/blogs/home2/food-allergy-survival" class="adv-thumb-link"><img
-                                                                src="//cdn.shopify.com/s/files/1/2644/1682/articles/bl2_a0e337d9-9408-48c4-b9a9-e631b54bb7bf_large.jpg?v=1516934503"
+                                                                src="/theme/assets/images/stewardship.jpeg"
                                                                 alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 col-sm-6 col-xs-6">
                                                 <div class="blog-info2 text-center info-center">
-                                                    <h2 class="title18"><a href="/blogs/home2/food-allergy-survival"
-                                                                           class="black">Food Allergy Survival</a></h2>
+                                                    <h2 class="title18">STEWARDSHIP</h2>
                                                     <ul class="list-inline-block post-comment-date">
-                                                        <li><span class="color"><i class="fa fa-calendar-o"></i> 25 January , 2018 </span>
-                                                        </li>
                                                         <li><span class="color"><i
                                                                         class="fa fa-commenting-o"></i></span><a
                                                                     href="#" class="color"></a></li>
                                                     </ul>
-                                                    <p class="desc">Donec porta gravida arcu. Morbi facilisis lorem
-                                                        felis, eu inerdum quam scelerisque eu. Phasellus vel turpis
-                                                        dictum</p>
-                                                    <a href="/blogs/home2/food-allergy-survival" class="shop-button">Read
-                                                        more</a>
+                                                    <p class="desc">We nourish the health and integrity of farmers and people, by building a local, sustainable, and organic food economy in a vibrant, educational marketplace.We support agriculture in Tamil Nadu by connecting community and agricultural producers through commerce.It exists to provide a living wage for our area farmers, conserve our farm land, provide the people with fresh, high-quality agricultural products to save family farms.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -186,29 +180,22 @@ $_SESSION['user'] = null;
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                 <div class="blog-info2 text-left info-left">
-                                                    <h2 class="title18"><a
-                                                                href="/blogs/home2/change-your-eating-habits-with-this-organic-food-diet-plan"
-                                                                class="black">Change your eating habits with this
-                                                            organic food diet plan</a></h2>
+                                                    <h2 class="title18">COMMUNITY</h2>
                                                     <ul class="list-inline-block post-comment-date">
-                                                        <li><span class="color"><i class="fa fa-calendar-o"></i>  25 January , 2018 </span>
-                                                        </li>
                                                         <li><span class="color"><i
                                                                         class="fa fa-commenting-o"></i></span><a
                                                                     href="#" class="color"></a></li>
                                                     </ul>
-                                                    <p class="desc">Donec porta gravida arcu. Morbi facilisis lorem
-                                                        felis, eu inerdum quam scelerisque eu. Phasellus vel turpis
-                                                        dictum das</p>
-                                                    <a href="/blogs/home2/change-your-eating-habits-with-this-organic-food-diet-plan"
-                                                       class="shop-button">Read more</a>
+                                                    <p class="desc">We promote a thriving and inclusive gathering place that celebrates our agricultural heritage in a national, historic landmark.
+                                                        FMM believes to be an effective leader by creating an equitable, healthy, and sustainable local food system. FMM is a sustainable organization.
+                                                        Our Market brings fresh food, education, and fun to our community and it promotes small farms and sustainable agriculture in TamilNadu.</p>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                 <div class="banner-adv zoom-image overlay-image">
                                                     <a href="/blogs/home2/change-your-eating-habits-with-this-organic-food-diet-plan"
                                                        class="adv-thumb-link"><img
-                                                                src="//cdn.shopify.com/s/files/1/2644/1682/articles/bl1_74344ef3-e3cc-42f8-aee8-c0b180378d95_large.jpg?v=1516934424"
+                                                                src="/theme/assets/images/Community-logo.jpeg"
                                                                 alt=""></a>
                                                 </div>
                                             </div>
@@ -221,27 +208,21 @@ $_SESSION['user'] = null;
                                                 <div class="banner-adv zoom-image overlay-image">
                                                     <a href="/blogs/home2/tips-for-ripening-your-fruit"
                                                        class="adv-thumb-link"><img
-                                                                src="//cdn.shopify.com/s/files/1/2644/1682/articles/bl3_large.jpg?v=1514277195"
+                                                                src="/theme/assets/images/partnership1jpg.jpeg"
                                                                 alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-6">
                                                 <div class="blog-info2 text-left info-right">
-                                                    <h2 class="title18"><a
-                                                                href="/blogs/home2/tips-for-ripening-your-fruit"
-                                                                class="black">Tips for Ripening your Fruit</a></h2>
+                                                    <h2 class="title18">PARTNERSHIP</h2>
                                                     <ul class="list-inline-block post-comment-date">
-                                                        <li><span class="color"><i class="fa fa-calendar-o"></i>  26 December , 2017 </span>
-                                                        </li>
                                                         <li><span class="color"><i
                                                                         class="fa fa-commenting-o"></i></span><a
                                                                     href="#" class="color"></a></li>
                                                     </ul>
-                                                    <p class="desc">Donec porta gravida arcu. Morbi facilisis lorem
-                                                        felis, eu inerdum quam scelerisque eu. Phasellus vel turpis
-                                                        dictum</p>
-                                                    <a href="/blogs/home2/tips-for-ripening-your-fruit"
-                                                       class="shop-button">Read more</a>
+                                                    <p class="desc">We believe authentic, collaborative relationships are essential to achieving our vision.
+                                                        To inspire and nurture a healthy community by building a local, sustainable and organic food economy in a vibrant experiential marketplace.
+                                                        We support to create a healthier community through partnerships.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -256,7 +237,7 @@ $_SESSION['user'] = null;
     </main>
 </div>
 
-<?php include("theme/include/footer.php");
+<?php include("theme/include/footerr.php");
 echo get_script(); ?>
 </body>
 </html>

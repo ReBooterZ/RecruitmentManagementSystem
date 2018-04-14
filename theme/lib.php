@@ -483,20 +483,12 @@ $header = '
                     <nav class="main-nav main-nav1">
                         <ul>
                             <li class=""><a href="/index.php">Home</a></li>
-                            <li class=""><a href="/collection.php">Fruits</a></li>
+                            <li class=""><a href="/category.php">Category</a></li>
                             <li class=" menu-item-has-children">
                                 <a href="#">Shop</a>
                                 <ul class="sub-menu">
                                     <li><a href="/shoplist.php">Shop list</a></li>
-                                    <li><a href="#">Shop grid</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Product Detail</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Detail fullwidth</a></li>
-                                                <li><a href="#">Detail sidebar right</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                    
                                   </ul>
                                 </li>
                                 <li class=" menu-item-has-children">
