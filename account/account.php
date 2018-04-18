@@ -14,7 +14,7 @@ else
         echo get_styles();
         echo get_script();
         ?>
-        <title> Account - Login </title>
+        <title> My Account </title>
     </head>
 
 <body class="template-index" style="background: rgb(255, 255, 255);">
@@ -22,9 +22,8 @@ else
 <?php echo get_header(); ?>
 <br><br>
 <div class="container">
-<div class="grid__item medium-up--one-third">
-      <h3>Account Details</h3>
-      <p><a href="/account/addresses" class="link-v1 rt" ></p
+<div class="">
+      
 <div class="page-container" id="PageContainer">
     <main class="main-content" id="MainContent" role="main">
         <div class="content-page">
@@ -56,7 +55,7 @@ else
 
   <div class="section-header text-left">
     <h3>My Account</h3>
-    <a href="/login.php" id="customer_logout_link">Log out</a>
+    <a href="/account/logout.php" id="customer_logout_link">Log out</a>
   </div>
 
   <div class="grid">
@@ -86,5 +85,6 @@ else
     </main>
  </div>
  </div>
+<?php include("../theme/include/footerr.php"); ?>
 </body>
 </html>

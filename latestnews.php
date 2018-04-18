@@ -40,11 +40,10 @@ require ("theme/lib.php");?>
 
 <body class="template-index" style="background: rgb(255, 255, 255);">
 
-<?php include("theme/include/header.php");
+<?php echo get_header();
 ?>
 
-
-<html>
+<br><br>
 <?php
 echo "
 <script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></script>
@@ -147,31 +146,10 @@ echo "
 
   
 
-  <div class=\"widget widget-popular-post\">
-    
-    <div class=\"wg-product-slider wg-post-slider\">
-      <div class=\"wrap-item group-navi owl-carousel owl-theme\" data-pagination=\"false\" data-navigation=\"true\" data-itemscustom=\"[[0,1],[560,2],[768,1]]\" style=\"opacity: 1; display: block;\">
-        <div class=\"owl-wrapper-outer\"><div class=\"owl-wrapper\" style=\"width: 1200px; left: 0px; display: block; transition: all 0ms ease; transform: translate3d(0px, 0px, 0px);\"><div class=\"owl-item active\" style=\"width: 300px;\"><div class=\"item\">
-          
-          
-        
-        </div></div><div class=\"owl-item\" style=\"width: 300px;\"><div class=\"item\">
-          
-          
-          
-      
-        </div></div></div></div>
-        <!-- End Item -->
-         
-        
-        
-        <!-- End Item -->
-      <div class=\"owl-controls clickable\" style=\"display: block;\"><div class=\"owl-buttons\"><div class=\"owl-prev\"><i class=\"icon ion-ios-arrow-thin-left\"></i></div><div class=\"owl-next\"><i class=\"icon ion-ios-arrow-thin-right\"></i></div></div></div></div>
-    </div>
-  </div>
+  
 
   <!-- End Widget -->
-</aside>
+
 
         </div>
         <div class=\"col-md-9 col-sm-8 col-xs-12\">

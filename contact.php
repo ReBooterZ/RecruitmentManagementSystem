@@ -40,7 +40,7 @@ require ("theme/lib.php");
 
 <body class="template-index" style="background: rgb(255, 255, 255);">
 
-<?php include("theme/include/header.php");
+<?php echo get_header();
 ?>
 
 

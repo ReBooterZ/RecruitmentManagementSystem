@@ -61,7 +61,7 @@ $_SESSION['user'] = null;
                                         <div class="item-diet table">
                                             <div class="diet-info text-right">
                                                 <h3 class="title18"><a href="#"
-                                                                       class="black">Purple Grapes</a></h3>
+                                                                       class="black">Capsicum</a></h3>
                                                 <p class="desc">Best Superfoods for Weight Loss</p>
                                             </div>
                                             <div class="diet-thumb"><a href="#"><img

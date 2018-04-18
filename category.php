@@ -1,14 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: chitra.p
- * Date: 4/7/2018
- * Time: 1:48 PM
- */
+
 require ("theme/lib.php");?>
 
 <!DOCTYPE html>
-<!-- saved from url=(0033)https://fruit-demo.myshopify.com/ -->
 <html class="supports-js supports-no-touch supports-csstransforms supports-csstransforms3d supports-fontface js csstransitions shopify-features__smart-payment-buttons--enabled" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <?php
@@ -18,11 +12,9 @@ require ("theme/lib.php");?>
 
 <body class="template-index" style="background: rgb(255, 255, 255);">
 
-<?php include("theme/include/header.php");
+<?php echo get_header();
 ?>
 
-
-<html>
 <?php
 echo "<div class=\"page-container\" id=\"PageContainer\">
 
@@ -41,7 +33,7 @@ echo "<div class=\"page-container\" id=\"PageContainer\">
 
 <div class=\"collection-grid-item\">
   <a href=\"/collection.php\" class=\"collection-grid-item__link\">
-    <div class=\"collection-grid-item__overlay\" style=\"background-image: url(//cdn.shopify.com/s/files/1/2644/1682/products/fruit_03_1ff0c82d-946b-41aa-a0ad-50083ef2607e_450x450_crop_top.jpg?v=1513649300)\">
+    <div class=\"collection-grid-item__overlay\" style=\"background-image: url(/theme/assets/images/sust_1.png)\">
       
     </div>
     <div class=\"collection-grid-item__title-wrapper\">
@@ -62,7 +54,7 @@ echo "<div class=\"page-container\" id=\"PageContainer\">
 
 <div class=\"collection-grid-item\">
   <a href=\"/vegetables.php\" class=\"collection-grid-item__link\">
-    <div class=\"collection-grid-item__overlay\" style=\"background-image: url(//cdn.shopify.com/s/files/1/2644/1682/products/fruit_03_1ff0c82d-946b-41aa-a0ad-50083ef2607e_450x450_crop_top.jpg?v=1513649300)\">
+    <div class=\"collection-grid-item__overlay\" style=\"background-image: url(/theme/assets/images/vegetable.jpeg)\">
       
     </div>
     <div class=\"collection-grid-item__title-wrapper\">
@@ -83,7 +75,7 @@ echo "<div class=\"page-container\" id=\"PageContainer\">
 
 <div class=\"collection-grid-item\">
   <a href=\"/fruits.php\" class=\"collection-grid-item__link\">
-    <div class=\"collection-grid-item__overlay\" style=\"background-image: url(//cdn.shopify.com/s/files/1/2644/1682/products/fruit_31_450x450_crop_top.jpg?v=1515125720)\">
+    <div class=\"collection-grid-item__overlay\" style=\"background-image: url(/theme/assets/images/fruitlist.jpeg)\">
       
     </div>
     <div class=\"collection-grid-item__title-wrapper\">
