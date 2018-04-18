@@ -89,6 +89,60 @@ echo "<div id=\"shopify-section-1516588728376\" class=\"shopify-section index-se
 
 
 </div>
+
+<div>
+<section>
+    <div class=\"container\">
+      <div class=\"pop-cat8 bg-white\">
+					 <div id=\"map\" style=\"width: 1000px; height: 400px;\"></div>
+
+  
+
+              
+              </div>
+</div>
+</section>
+</div>
 ";
 include("theme/include/footerr.php");
-echo get_script(); ?>
+echo get_script();
+
+echo "
+<!--<script async defer
+    src=\"https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap\">
+    </script>-->
+<script src=\"http://maps.google.com/maps/api/js?key=AIzaSyBvu244MA3lIANoX-iiZ9ldmcHyOA-XAwo&sensor=false\" 
+          type=\"text/javascript\"></script>
+<script type=\"text/javascript\">
+    var locations = [
+      ['Chromepet Uzhavar Santhai', 12.9488674,80.15302329999997,1],
+      ['Kundrathur Uzhavar Santhai', 12.996765, 80.091542, 2],
+      ['Pallavaram Uzhavar Santhai', 12.970826, 80.14734190000001, 3]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: new google.maps.LatLng(12.970826, 80.14734190000001),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+  </body>
+  </html>";
