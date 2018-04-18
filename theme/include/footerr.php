@@ -30,7 +30,7 @@
                                 <div class="contact-footer">
                                     <p class="desc silver"><span class="color"><i class="fa fa-home" aria-hidden="true"></i></span>Our business address is Chennai Institute of Technology</p>
                                     <p class="desc silver"><span class="color"><i class="fa fa-mobile" aria-hidden="true"></i></span>+ 91 9126543123</p>
-                                    <p class="desc silver"><span class="color"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="#" class="silver">Our mailing address is farmersmarket@gmail.com</a></p>
+                                    <p class="desc silver"><span class="color"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="javascript:void(0)" class="silver">Our mailing address is farmersmarket@gmail.com</a></p>
                                     <p class="desc silver none-padding">For Product Registration and general enquires please contact us</p>
                                 </div>
                             </div>

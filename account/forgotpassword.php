@@ -1,9 +1,10 @@
 <?php
 require("../theme/lib.php");
 require("../lib/dblib.php");
-if (is_null($_SESSION['user']))
+if(is_null($_SESSION['user']))
     $_SESSION['user'] = $_COOKIE['user'];
-?>
+else
+    $_SESSION['user'] = NULL;?>
 <!DOCTYPE html>
 <html class="supports-js supports-no-touch supports-csstransforms supports-csstransforms3d supports-fontface js csstransitions shopify-features__smart-payment-buttons--enabled"
       lang="en" style="">

@@ -1,7 +1,10 @@
 <?php
 require("./theme/lib.php");
 require("./lib/dblib.php");
-
+if(is_null($_SESSION['user']))
+    $_SESSION['user'] = $_COOKIE['user'];
+else
+    $_SESSION['user'] = NULL;
 $DB = new Db();
 
 $sql = "SELECT i.* FROM items i JOIN item_mapping im ON i.id = im.item_id WHERE im.communitycentre_id = 3";

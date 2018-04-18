@@ -1,14 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: chitra.p
- * Date: 4/7/2018
- * Time: 2:53 PM
- */
-require ("theme/lib.php");?>
+require ("theme/lib.php");
+if(is_null($_SESSION['user']))
+    $_SESSION['user'] = $_COOKIE['user'];
+else
+    $_SESSION['user'] = NULL;?>
 
 <!DOCTYPE html>
-<!-- saved from url=(0033)https://fruit-demo.myshopify.com/ -->
 <html class="supports-js supports-no-touch supports-csstransforms supports-csstransforms3d supports-fontface js csstransitions shopify-features__smart-payment-buttons--enabled" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">

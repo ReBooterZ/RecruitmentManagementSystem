@@ -1,7 +1,10 @@
 <?php
 
  require ("theme/lib.php");
-
+if(is_null($_SESSION['user']))
+    $_SESSION['user'] = $_COOKIE['user'];
+else
+    $_SESSION['user'] = NULL;
 ?>
 <!DOCTYPE html>
 <html class="supports-js supports-no-touch supports-csstransforms supports-csstransforms3d supports-fontface js csstransitions shopify-features__smart-payment-buttons--enabled" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -137,7 +140,7 @@ echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></s
 						<div class=\"list-diet custom-scroll mCustomScrollbar _mCS_1\"><div class=\"mCustomScrollBox mCS-light\" id=\"mCSB_1\" style=\"position:relative; height:100%; overflow:hidden; max-width:100%;\"><div class=\"mCSB_container\" style=\"position:relative; top:0;\">
                           
 							<div class=\"item-diet table\">
-								<div class=\"diet-thumb\"><a href=\"\"><img src=\"/theme/assets/images/diet1.jpg\" alt=\"\"></a></div>
+								<div class=\"diet-thumb\"><a href=\"\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/diet1.png?9974154348750016803\" alt=\"\"></a></div>
 								<div class=\"diet-info\">
 									<h3 class=\"title18\"><a href=\"\" class=\"black\">NOURISHMENT</a></h3>
 									<p class=\"desc\">Access to fresh nutritious food is a foundation for health and human dignity.</p>
@@ -216,32 +219,14 @@ echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></s
                       
 						<div class=\"owl-wrapper-outer\"><div class=\"owl-wrapper\" style=\"width: 4980px; left: 0px; display: block; transition: all 0ms ease; transform: translate3d(0px, 0px, 0px);\"><div class=\"owl-item active\" style=\"width: 830px;\"><div class=\"item-about-client text-center\">
 							<div class=\"client-thumb\">
-								<a href=\"#\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/av2.png?9974154348750016803\" alt=\"\"></a>
+								<a href=\"#\"><img src=\"/theme/assets/images/avatar (1).jpg\" alt=\"\"></a>
 							</div>
 							
 								<p class=\"desc\">I am a Computer Science Engineer currently working as an intern with the designation as SDE.</p>
 								<h3 class=\"title18 font-bold\"><a href=\"#\" class=\"black\">CHITRA PRIYADARSHINI</a></h3>
 								<span class=\"color\">SDE</span>
 						
-						</div></div><div class=\"owl-item\" style=\"width: 830px;\"><div class=\"item-about-client text-center\">
-							<div class=\"client-thumb\">
-								<a href=\"#\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/av2.png?9974154348750016803\" alt=\"\"></a>
-							</div>
-							
-								<p class=\"desc\">I am a Computer Science Engineer currently working as an intern with the designation as SDE.</p>
-								<h3 class=\"title18 font-bold\"><a href=\"#\" class=\"black\">ONATHAN VANCE</a></h3>
-								<span class=\"color\">CEO &amp; Founder</span>
-						
-						</div></div><div class=\"owl-item\" style=\"width: 830px;\"><div class=\"item-about-client text-center\">
-							<div class=\"client-thumb\">
-								<a href=\"#\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/av2.png?9974154348750016803\" alt=\"\"></a>
-							</div>
-							
-								<p class=\"desc\">I am a Computer Science Engineer currently working as an intern with the designation as SDE.</p>
-								<h3 class=\"title18 font-bold\"><a href=\"#\" class=\"black\">ONATHAN VANCE</a></h3>
-								<span class=\"color\">CEO &amp; Founder</span>
-						
-						</div></div></div></div>
+						</div></div>
                       
 						
                       
@@ -258,108 +243,7 @@ echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></s
 
 </div>
 		<!-- End What About -->
-		<div id=\"shopify-section-section-our-team-v2\" class=\"shopify-section index-section\">
-
-<div data-section-id=\"section-our-team-v2\" data-section-type=\"section-our-team\" style=\" \">
-  <section class=\"our-team\">
-    <div class=\"container\">
-			<div class=\"decate-farmer\">
-				<h2 class=\"text-center font-bold title30\">Dedicated Farmer</h2>
-				<div class=\"decate-slider\">
-					<div class=\"wrap-item owl-carousel owl-theme\" data-pagination=\"false\" data-itemscustom=\"[[0,1],[990,2]]\" data-autoplay=\"true\" style=\"opacity: 1; display: block;\">
-                      
-						<div class=\"owl-wrapper-outer\"><div class=\"owl-wrapper\" style=\"width: 3600px; left: 0px; display: block; transition: all 1000ms ease; transform: translate3d(0px, 0px, 0px);\"><div class=\"owl-item active\" style=\"width: 600px;\"><div class=\"item-decate\">
-							<div class=\"row\">
-								<div class=\"col-md-6 col-sm-6 col-xs-6\">
-									<div class=\"decate-thumb banner-adv zoom-out\">
-										<a href=\"\" class=\"adv-thumb-link\">
-										
-                                          
-                                          
-                                          <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/farm1.jpg?9974154348750016803\" alt=\"\">
-                                          
-                                           
-                                          <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/farm1.jpg?9974154348750016803\" alt=\"\">
-                                          
-										</a>
-									</div>
-								</div>
-								<div class=\"col-md-6 col-sm-6 col-xs-6\">
-									<div class=\"decate-info\">
-										<h3 class=\"title18 font-bold\"><a href=\"\">Jonathan</a></h3>
-										<p class=\"color\">sale</p>
-										<p class=\"desc\">Meet the maker of our bread – our fabulous baker boy alberto Trombin. He creates superb bread in their Melbourne-based bread-quarters.</p>
-										<div class=\"social-network\">
-											<a href=\"#\"><i class=\"fa fa-facebook\"></i></a><a href=\"#\"><i class=\"fa fa-twitter\"></i></a><a href=\"#\"><i class=\"fa fa-instagram\"></i></a><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a>
-										</div>
-              
-									</div>
-								</div>
-							</div>
-						</div></div><div class=\"owl-item active\" style=\"width: 600px;\"><div class=\"item-decate\">
-							<div class=\"row\">
-								<div class=\"col-md-6 col-sm-6 col-xs-6\">
-									<div class=\"decate-thumb banner-adv zoom-out\">
-										<a href=\"\" class=\"adv-thumb-link\">
-										
-                                          
-                                          
-                                          <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/farm1.jpg?9974154348750016803\" alt=\"\">
-                                          
-                                           
-                                          <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/farm1.jpg?9974154348750016803\" alt=\"\">
-                                          
-										</a>
-									</div>
-								</div>
-								<div class=\"col-md-6 col-sm-6 col-xs-6\">
-									<div class=\"decate-info\">
-										<h3 class=\"title18 font-bold\"><a href=\"\">Jonathan</a></h3>
-										<p class=\"color\">sale</p>
-										<p class=\"desc\">Meet the maker of our bread – our fabulous baker boy alberto Trombin. He creates superb bread in their Melbourne-based bread-quarters.</p>
-										<div class=\"social-network\">
-											<a href=\"#\"><i class=\"fa fa-facebook\"></i></a><a href=\"#\"><i class=\"fa fa-twitter\"></i></a><a href=\"#\"><i class=\"fa fa-instagram\"></i></a><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a>
-										</div>
-              
-									</div>
-								</div>
-							</div>
-						</div></div><div class=\"owl-item\" style=\"width: 600px;\"><div class=\"item-decate\">
-							<div class=\"row\">
-								<div class=\"col-md-6 col-sm-6 col-xs-6\">
-									<div class=\"decate-thumb banner-adv zoom-out\">
-										<a href=\"\" class=\"adv-thumb-link\">
-										
-                                          
-                                          
-                                          <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/farm1.jpg?9974154348750016803\" alt=\"\">
-                                          
-                                           
-                                          <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/farm1.jpg?9974154348750016803\" alt=\"\">
-                                          
-										</a>
-									</div>
-								</div>
-								<div class=\"col-md-6 col-sm-6 col-xs-6\">
-									<div class=\"decate-info\">
-										<h3 class=\"title18 font-bold\"><a href=\"\">Jonathan</a></h3>
-										<p class=\"color\">sale</p>
-										<p class=\"desc\">Meet the maker of our bread – our fabulous baker boy alberto Trombin. He creates superb bread in their Melbourne-based bread-quarters.</p>
-										<div class=\"social-network\">
-											<a href=\"#\"><i class=\"fa fa-facebook\"></i></a><a href=\"#\"><i class=\"fa fa-twitter\"></i></a><a href=\"#\"><i class=\"fa fa-instagram\"></i></a><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a>
-										</div>
-              
-									</div>
-								</div>
-							</div>
-						</div></div></div></div>
-                       
-					</div>
-				</div>
-			</div>
-		</div>
-    
-  </section>
+		
 </div>
 
 

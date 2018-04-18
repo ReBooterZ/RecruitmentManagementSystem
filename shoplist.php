@@ -1,14 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: chitra.p
- * Date: 4/14/2018
- * Time: 10:43 PM
- */
+
 
 require("./theme/lib.php");
 require("./lib/dblib.php");
-
+if(is_null($_SESSION['user']))
+    $_SESSION['user'] = $_COOKIE['user'];
+else
+    $_SESSION['user'] = NULL;
 ?>
 
 <!DOCTYPE html>

@@ -1,7 +1,10 @@
 <?php require("theme/lib.php");
 
 session_start();
-$_SESSION['user'] = null;
+if(is_null($_SESSION['user']))
+    $_SESSION['user'] = $_COOKIE['user'];
+else
+    $_SESSION['user'] = NULL;
 
 ?>
 

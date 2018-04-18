@@ -1,11 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: chitra.p
- * Date: 4/7/2018
- * Time: 4:22 PM
- */
-require ("theme/lib.php");?>
+
+require ("./theme/lib.php");
+if(is_null($_SESSION['user']))
+    $_SESSION['user'] = $_COOKIE['user'];
+else
+    $_SESSION['user'] = NULL;?>
 
 <!DOCTYPE html>
 <!-- saved from url=(0033)https://fruit-demo.myshopify.com/ -->
@@ -236,7 +235,7 @@ echo "
 							</div>
 							<div class=\"wc-proceed-to-checkout\">
 							
-                              <a class=\"checkout-button button alt wc-forward bg-color\" href=\"/checkout\">Check out</a>
+                              <a class=\"checkout-button button alt wc-forward bg-color\" href=\"/checkout.php\">Check out</a>
                              
                               
                               

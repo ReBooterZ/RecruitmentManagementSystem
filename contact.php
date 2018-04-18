@@ -1,14 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: chitra.p
- * Date: 4/7/2018
- * Time: 1:27 PM
- */
 require ("theme/lib.php");
+if(is_null($_SESSION['user']))
+    $_SESSION['user'] = $_COOKIE['user'];
+else
+    $_SESSION['user'] = NULL;
 ?>
 <!DOCTYPE html>
-<!-- saved from url=(0033)https://fruit-demo.myshopify.com/ -->
 <html class="supports-js supports-no-touch supports-csstransforms supports-csstransforms3d supports-fontface js csstransitions shopify-features__smart-payment-buttons--enabled" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -44,7 +41,7 @@ require ("theme/lib.php");
 ?>
 
 
-<html>
+<br><br>
 
 <?php
 
@@ -96,19 +93,19 @@ echo "
 							<div class=\"col-md-4 col-sm-4 col-xs-12\">
 								<div class=\"item-contact-info text-center\">
 									<a class=\"contact-icon color wobble-horizontal\" href=\"#\"><i class=\"fa fa-mobile\"></i></a>
-									<h2 class=\"title18 text-upperrcase font-bold\">Hotline: <a href=\"#\">9566150480</a></h2>
+									<h2 class=\"title18 text-upperrcase font-bold\">Hotline: <a href=\"#\">9123456780</a></h2>
 								</div>
 							</div>
 							<div class=\"col-md-4 col-sm-4 col-xs-12\">
 								<div class=\"item-contact-info text-center\">
 									<a class=\"contact-icon color wobble-horizontal\" href=\"#\"><i class=\"fa fa-mobile\"></i></a>
-									<h2 class=\"title18 text-upperrcase font-bold\">Hotline: <a href=\"#\">7358447701</a></h2>
+									<h2 class=\"title18 text-upperrcase font-bold\">Hotline: <a href=\"#\">7896541230</a></h2>
 								</div>
 							</div>
 							<div class=\"col-md-4 col-sm-4 col-xs-12\">
 								<div class=\"item-contact-info text-center\">
 									<a class=\"contact-icon color wobble-horizontal\" href=\"#\"><i class=\"fa fa-mobile\"></i></a>
-									<h2 class=\"title18 text-upperrcase font-bold\">Hotline: <a href=\"#\">9940257661</a></h2>
+									<h2 class=\"title18 text-upperrcase font-bold\">Hotline: <a href=\"#\">8970234561</a></h2>
 								</div>
 							</div>
 						</div>
@@ -156,5 +153,6 @@ echo "
 
     </main>
  </div>";
-
+include ("./theme/include/footerr.php");
+echo "</body></html>";
 ?>

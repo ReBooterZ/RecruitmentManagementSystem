@@ -380,14 +380,7 @@ $header = '
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <form class="search-form pull-left" method="get"
-                                  action="#" role="search">
-                                <input type="hidden" name="type" value="product">
-                                <input onblur="if (this.value==&#39;&#39;) this.value = this.defaultValue"
-                                       onfocus="if (this.value==this.defaultValue) this.value = &#39;&#39;"
-                                       value="Search" type="text" name="q">
-                                <input type="submit" value="">
-                            </form>
+                                
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="logo logo7">
@@ -399,9 +392,14 @@ $header = '
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-								<div class="mini-cart-box mini-cart1 pull-right">
-                                <a class="mini-cart-link" href="/cart.php">
-                                    <span class="mini-cart-icon title18 color"><i
+								<div class="mini-cart-box mini-cart1 pull-right">';
+								if(!(is_null($_SESSION['user']))) {
+                                    $header.= '<a class="mini-cart-link" href="/cart.php">';
+                                }
+                                else{
+                                    $header.= '<a class="mini-cart-link" href="/account/login.php">';
+                                }
+                                $header.= '<span class="mini-cart-icon title18 color"><i
                                                 class="fa fa-shopping-basket"></i></span>
                                     <span class="mini-cart-number"><span class="CartCount">0</span> item - <span
                                                 class="color" id="CartCost"> <span class="money"
