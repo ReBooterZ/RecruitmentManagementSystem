@@ -12,7 +12,7 @@ else
         <?php
         echo get_meta();
         echo get_styles();
-        //echo get_script();
+        echo get_script();
         ?>
         <title> Account - Login </title>
     </head>
@@ -21,6 +21,7 @@ else
 
 <?php echo get_header(); ?>
 <br><br>
+<div class="container">
 <div class="grid__item medium-up--one-third">
       <h3>Account Details</h3>
       <p><a href="/account/addresses" class="link-v1 rt" ></p
@@ -45,6 +46,7 @@ else
     </div>
   </div>
 </div>
+        </div>
 
 
 
@@ -64,7 +66,7 @@ else
       
         
 
-          <p>You haven\'t placed any orders yet.</p>
+          <p>You haven't placed any orders yet.</p>
 
         
         

@@ -61,7 +61,7 @@ echo "<div class=\"page-container\" id=\"PageContainer\">
 
 
 <div class=\"collection-grid-item\">
-  <a href=\"/collections/dried-products\" class=\"collection-grid-item__link\">
+  <a href=\"/vegetables.php\" class=\"collection-grid-item__link\">
     <div class=\"collection-grid-item__overlay\" style=\"background-image: url(//cdn.shopify.com/s/files/1/2644/1682/products/fruit_03_1ff0c82d-946b-41aa-a0ad-50083ef2607e_450x450_crop_top.jpg?v=1513649300)\">
       
     </div>
@@ -82,7 +82,7 @@ echo "<div class=\"page-container\" id=\"PageContainer\">
 
 
 <div class=\"collection-grid-item\">
-  <a href=\"/collections/fruit\" class=\"collection-grid-item__link\">
+  <a href=\"/fruits.php\" class=\"collection-grid-item__link\">
     <div class=\"collection-grid-item__overlay\" style=\"background-image: url(//cdn.shopify.com/s/files/1/2644/1682/products/fruit_31_450x450_crop_top.jpg?v=1515125720)\">
       
     </div>

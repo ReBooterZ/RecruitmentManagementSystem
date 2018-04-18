@@ -110,7 +110,7 @@ echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></s
   <div class=\"banner-info\">
     <h2 class=\"title30 color\">
       
-        About Us
+        About
         
     </h2>
     <div class=\"bread-crumb white\">
@@ -119,7 +119,7 @@ echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></s
      
 
         <span>
-        About us
+        About
       </span>
 
         
@@ -217,7 +217,7 @@ echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></s
   <section class=\"testimonial-v4\">
 <div class=\"what-about\">
 			<div class=\"container\">
-				<h2 class=\"title30 text-center font-bold\">What People Say</h2>
+				<h2 class=\"title30 text-center font-bold\">Personal Info</h2>
 				<div class=\"about-client-slider\">
 					<div class=\"wrap-item owl-carousel owl-theme\" data-itemscustom=\"[[0,1]]\" data-transition=\"fade\" style=\"opacity: 1; display: block;\">
 	
@@ -227,7 +227,16 @@ echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></s
 								<a href=\"#\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/av2.png?9974154348750016803\" alt=\"\"></a>
 							</div>
 							
-								<p class=\"desc\">I rarely write reviews for products but with the EngoCreative, I am more than grateful. The site is fully customizable and you can really feel like playing while designing the site! Thanks again for having made such a convenient, yet fully-functional theme.</p>
+								<p class=\"desc\">I am a Computer Science Engineer currently working as an intern with the designation as SDE.</p>
+								<h3 class=\"title18 font-bold\"><a href=\"#\" class=\"black\">CHITRA PRIYADARSHINI</a></h3>
+								<span class=\"color\">SDE</span>
+						
+						</div></div><div class=\"owl-item\" style=\"width: 830px;\"><div class=\"item-about-client text-center\">
+							<div class=\"client-thumb\">
+								<a href=\"#\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/av2.png?9974154348750016803\" alt=\"\"></a>
+							</div>
+							
+								<p class=\"desc\">I am a Computer Science Engineer currently working as an intern with the designation as SDE.</p>
 								<h3 class=\"title18 font-bold\"><a href=\"#\" class=\"black\">ONATHAN VANCE</a></h3>
 								<span class=\"color\">CEO &amp; Founder</span>
 						
@@ -236,16 +245,7 @@ echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></s
 								<a href=\"#\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/av2.png?9974154348750016803\" alt=\"\"></a>
 							</div>
 							
-								<p class=\"desc\">I rarely write reviews for products but with the EngoCreative, I am more than grateful. The site is fully customizable and you can really feel like playing while designing the site! Thanks again for having made such a convenient, yet fully-functional theme.</p>
-								<h3 class=\"title18 font-bold\"><a href=\"#\" class=\"black\">ONATHAN VANCE</a></h3>
-								<span class=\"color\">CEO &amp; Founder</span>
-						
-						</div></div><div class=\"owl-item\" style=\"width: 830px;\"><div class=\"item-about-client text-center\">
-							<div class=\"client-thumb\">
-								<a href=\"#\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/av2.png?9974154348750016803\" alt=\"\"></a>
-							</div>
-							
-								<p class=\"desc\">I rarely write reviews for products but with the EngoCreative, I am more than grateful. The site is fully customizable and you can really feel like playing while designing the site! Thanks again for having made such a convenient, yet fully-functional theme.</p>
+								<p class=\"desc\">I am a Computer Science Engineer currently working as an intern with the designation as SDE.</p>
 								<h3 class=\"title18 font-bold\"><a href=\"#\" class=\"black\">ONATHAN VANCE</a></h3>
 								<span class=\"color\">CEO &amp; Founder</span>
 						

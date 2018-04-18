@@ -35,7 +35,7 @@ if ($result = $DB->select($sql)) {
                 <div class="container">
                     <div class="shop-banner banner-adv line-scale zoom-image">
                         <a href="#" class="adv-thumb-link">
-                            <img src="//cdn.shopify.com/s/files/1/2644/1682/t/27/assets/breadcrumb_image_1.jpg?9974154348750016803"
+                            <img src="/theme/assets/images/markets-fruit-veg.jpeg"
                                  alt="Banner-header">
                         </a>
                         <div class="banner-info">
@@ -43,7 +43,7 @@ if ($result = $DB->select($sql)) {
                                 All
                             </h2>
                             <div class="bread-crumb white">
-                                <a href="/" title="Back to the frontpage" class="white">Home</a>
+                                <a href="/" title="Back to the frontpage" class="white">Collections</a>
                                 <span>All</span>
                             </div>
                         </div>
@@ -67,89 +67,26 @@ if ($result = $DB->select($sql)) {
                                                 <li class="li-price">
                                                     <input type="checkbox" value="0-100">
                                                     <a href="javascript:void(0)" title="Rs0 - Rs100"
-                                                       class="">Rs0-Rs100</a>
+                                                       class="">Rs 0 - Rs 100</a>
                                                 </li>
                                                 <li class="li-price">
                                                     <input type="checkbox" value="100-200">
                                                     <a href="javascript:void(0)" title="Rs100 - Rs200"
-                                                       class="">Rs100 - Rs200</a>
+                                                       class="">Rs 100 - Rs 200</a>
                                                 </li>
                                                 <li class="li-price">
                                                     <input type="checkbox" value="200-300">
                                                     <a href="javascript:void(0)" title="$200-$300"
-                                                       class="">Rs200 - Rs300</a>
+                                                       class="">Rs 200 - Rs 300</a>
                                                 </li>
                                                 <li class="li-price">
                                                     <input type="checkbox" value="0-100">
                                                     <a href="javascript:void(0)" title="Above Rs300" class="">Above
-                                                        Rs300</a>
+                                                        Rs 300</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="widget widget-filter-price widget-container widget_product_categories filter-block filter-custom filter-tag">
-                                        <h2 class="title18 title-widget font-bold">Filter by Size</h2>
-                                        <div class="widget-content">
-                                            <ul class="list-filter size-filter">
-                                                <li class="li-price">
-                                                    <input type="checkbox" value="x">
-                                                    <a href="javascript:void(0)" title="X">X</a>
-                                                </li>
-                                                <li class="li-price">
-                                                    <input type="checkbox" value="m">
-                                                    <a href="javascript:void(0)" title="M">M</a>
-                                                </li>
-                                                <li class="li-price">
-                                                    <input type="checkbox" value="l">
-                                                    <a href="javascript:void(0)" title="L">L</a>
-                                                </li>
-                                                <li class="li-price">
-                                                    <input type="checkbox" value="xl">
-                                                    <a href="javascript:void(0)" title="XL">XL</a>
-                                                </li>
-                                                <li class="li-price">
-                                                    <input type="checkbox" value="2xl">
-                                                    <a href="javascript:void(0)" title="2XL">2XL</a>
-                                                </li>
-                                                <li class="li-price">
-                                                    <input type="checkbox" value="3xl">
-                                                    <a href="javascript:void(0)" title="3XL">3XL</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="widget widget-filter-price widget-container widget_product_categories filter-block filter-custom filter-tag">
-                                        <h2 class="title18 title-widget font-bold">Filter by Color</h2>
-                                        <div class="widget-content">
-                                            <ul class="list-filter size-filter">
-                                                <li class="li-price ">
-                                                    <input type="checkbox" value="red">
-                                                    <a href="javascript:void(0)" class="">Red</a>
-                                                </li>
-                                                <li class="li-price ">
-                                                    <input type="checkbox" value="blue">
-                                                    <a href="javascript:void(0)" class="">Blue</a>
-                                                </li>
-                                                <li class="li-price ">
-                                                    <input type="checkbox" value="white">
-                                                    <a href="javascript:void(0)" class="">White</a>
-                                                </li>
-                                                <li class="li-price ">
-                                                    <input type="checkbox" value="orange">
-                                                    <a href="javascript:void(0)" class="">Orange</a>
-                                                </li>
-                                                <li class="li-price ">
-                                                    <input type="checkbox" value="black">
-                                                    <a href="javascript:void(0)" class="">Black</a>
-                                                </li>
-                                                <li class="li-price ">
-                                                    <input type="checkbox" value="pupple">
-                                                    <a href="javascript:void(0)" class="">Purple</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
                                 </aside>
 
 
@@ -170,7 +107,6 @@ if ($result = $DB->select($sql)) {
                                                     <div class="select-box border radius6 inline-block ">
                                                         <select class="radius6 orderby" name="SortBy" id="SortBy">
                                                             <option value="manual">Sort: Featured</option>
-                                                            <option value="best-selling">Sort: Best Selling</option>
                                                             <option value="title-ascending">Sort: Alphabetically, A-Z
                                                             </option>
                                                             <option value="title-descending">Sort: Alphabetically, Z-A
@@ -290,9 +226,7 @@ if ($result = $DB->select($sql)) {
                                                                 </form>
 
 
-                                                                <a href="javascript:void(0)" data-id="fresh-meal-kit-1"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
+                                                              
                                                             </div>
                                                         </div>
                                                     </div>
@@ -358,7 +292,7 @@ if ($result = $DB->select($sql)) {
                                                             <div class="product-extra-link">
 
 
-                                                                <a href="/account/login" class="wishlist-link"><i
+                                                                <a href="/account/login.php" class="wishlist-link"><i
                                                                             class="fa fa-heart-o"
                                                                             aria-hidden="true"></i><span>wishlist</span></a>
 
@@ -375,9 +309,7 @@ if ($result = $DB->select($sql)) {
                                                                 </form>
 
 
-                                                                <a href="javascript:void(0)" data-id="fresh-meal-kit-1"
-                                                                   class="compare-link quick-view engoj-btn-quickview"><i
-                                                                            class="fa fa-search" aria-hidden="true"></i><span>Quick view</span></a>
+                        
                                                             </div>
                                                         </div>
                                                     </div>
@@ -403,7 +335,7 @@ if ($result = $DB->select($sql)) {
     </main>
 </div>
 
-<?php include("theme/include/footer.php");
+<?php include("theme/include/footerr.php");
 echo get_script(); ?>
 
 </body>

@@ -494,12 +494,10 @@ $header = '
                                 <li class=" menu-item-has-children">
                                     <a href="#">Latest News</a>
                                     <ul class="sub-menu">
-                                        <li><a href="/latestnews.php">Latest News</a></li>
-                                        <li><a href="#">Blog masonry</a></li>
-                                        <li><a href="#">Blog detail</a></li>
+                                        <li><a href="/latestnews.php">Latest News List</a></li>
                                   </ul>
                                 </li>
-                                <li class=""><a href="/aboutus.php">About Us</a></li>
+                                <li class=""><a href="/aboutus.php">About</a></li>
                                 <li class=""><a href="/contact.php">Contact</a></li>
                             </ul>
                             <a href="#" class="toggle-mobile-menu"><span></span></a>

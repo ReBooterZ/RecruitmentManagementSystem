@@ -139,38 +139,7 @@ echo "
 
           
 
-<aside class=\"sidebar-left sidebar-blog\">
-  <div class=\"widget widget-search\">
-    <form class=\"search-form\">
-      <input onblur=\"if (this.value=='') this.value = this.defaultValue\" onfocus=\"if (this.value==this.defaultValue) this.value = ''\" value=\"Search\" type=\"text\" name=\"q\">
-      <input type=\"submit\" value=\"\">
-    </form>
-
-  </div>
-
-
   
-
-  <div class=\"widget widget-category\">
-    <h2 class=\"title18 title-widget font-bold\">category blog</h2>
-    <ul class=\"list-none wg-list-cat\">
-      
-      <li><a href=\"/index.php\">Home</a></li>
-      
-      <li><a href=\"/collection.php\">Fruits</a></li>
-      
-      <li><a href=\"/collection.php\">Shop</a></li>
-      
-      <li><a href=\"/latestnews.php\">Latest News</a></li>
-      
-      <li><a href=\"/aboutus.php\">About</a></li>
-      
-      <li><a href=\"/contact.php\">Contact</a></li>
-      
-    </ul>
-  </div>
-
-
   
   <!-- End Widget -->
 
@@ -179,126 +148,18 @@ echo "
   
 
   <div class=\"widget widget-popular-post\">
-    <h2 class=\"title18 title-widget font-bold\">recent post</h2>
+    
     <div class=\"wg-product-slider wg-post-slider\">
       <div class=\"wrap-item group-navi owl-carousel owl-theme\" data-pagination=\"false\" data-navigation=\"true\" data-itemscustom=\"[[0,1],[560,2],[768,1]]\" style=\"opacity: 1; display: block;\">
         <div class=\"owl-wrapper-outer\"><div class=\"owl-wrapper\" style=\"width: 1200px; left: 0px; display: block; transition: all 0ms ease; transform: translate3d(0px, 0px, 0px);\"><div class=\"owl-item active\" style=\"width: 300px;\"><div class=\"item\">
           
           
-          <div class=\"item-pop-post table\">
-            <div class=\"post-thumb banner-adv overlay-image zoom-image\">
-
-              <a href=\"/blogs/news/soil-health-starts-with-one-basic-principle-1\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/mas1_b5ad4912-7d1a-4f5e-b2d4-667a3e1d56d5_grande.jpg?v=1516960571\" alt=\"\"></a>
-
-            </div>
-            <div class=\"post-info\">
-              <h3 class=\"title14\"><a href=\"/blogs/news/soil-health-starts-with-one-basic-principle-1\" class=\"black\">Soil health starts with one basic principle</a></h3>
-              <span class=\"silver\"> 26 January , 2018 </span>
-            </div>
-          </div>
-          
-          
-          
-          <div class=\"item-pop-post table\">
-            <div class=\"post-thumb banner-adv overlay-image zoom-image\">
-
-              <a href=\"/blogs/news/soil-health-starts-with-one-basic-principle\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/mas1_grande.jpg?v=1516960569\" alt=\"\"></a>
-
-            </div>
-            <div class=\"post-info\">
-              <h3 class=\"title14\"><a href=\"/blogs/news/soil-health-starts-with-one-basic-principle\" class=\"black\">Soil health starts with one basic principle</a></h3>
-              <span class=\"silver\"> 26 January , 2018 </span>
-            </div>
-          </div>
-          
-          
-          
-          <div class=\"item-pop-post table\">
-            <div class=\"post-thumb banner-adv overlay-image zoom-image\">
-
-              <a href=\"/blogs/news/tips-for-ripening-your-fruit-2\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/list5_grande.jpg?v=1516960537\" alt=\"\"></a>
-
-            </div>
-            <div class=\"post-info\">
-              <h3 class=\"title14\"><a href=\"/blogs/news/tips-for-ripening-your-fruit-2\" class=\"black\">Tips for Ripening your Fruit</a></h3>
-              <span class=\"silver\"> 26 January , 2018 </span>
-            </div>
-          </div>
-          
-          
-          
-          <div class=\"item-pop-post table\">
-            <div class=\"post-thumb banner-adv overlay-image zoom-image\">
-
-              <a href=\"/blogs/news/tips-for-ripening-your-fruit-1\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/list4_grande.jpg?v=1516960505\" alt=\"\"></a>
-
-            </div>
-            <div class=\"post-info\">
-              <h3 class=\"title14\"><a href=\"/blogs/news/tips-for-ripening-your-fruit-1\" class=\"black\">Tips for Ripening your Fruit</a></h3>
-              <span class=\"silver\"> 26 January , 2018 </span>
-            </div>
-          </div>
-          
-          
-          
-          <div class=\"item-pop-post table\">
-            <div class=\"post-thumb banner-adv overlay-image zoom-image\">
-
-              <a href=\"/blogs/news/tips-for-ripening-your-fruit\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/list3_grande.jpg?v=1516960430\" alt=\"\"></a>
-
-            </div>
-            <div class=\"post-info\">
-              <h3 class=\"title14\"><a href=\"/blogs/news/tips-for-ripening-your-fruit\" class=\"black\">Tips for Ripening your Fruit</a></h3>
-              <span class=\"silver\"> 26 January , 2018 </span>
-            </div>
-          </div>
-          
-          
-          
-          
-          
-          
+        
         </div></div><div class=\"owl-item\" style=\"width: 300px;\"><div class=\"item\">
           
           
           
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          <div class=\"item-pop-post table\">
-            <div class=\"post-thumb banner-adv overlay-image zoom-image\">
-
-              <a href=\"/blogs/news/best-organic-garden-fertilisers\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/bl1_grande.jpg?v=1513754330\" alt=\"\"></a>
-
-            </div>
-            <div class=\"post-info\">
-              <h3 class=\"title14\"><a href=\"/blogs/news/best-organic-garden-fertilisers\" class=\"black\">Best Organic Garden Fertilisers</a></h3>
-              <span class=\"silver\"> 20 December , 2017 </span>
-            </div>
-          </div>
-          
-          
-          
-          <div class=\"item-pop-post table\">
-            <div class=\"post-thumb banner-adv overlay-image zoom-image\">
-
-              <a href=\"/blogs/news/where-to-best-find-wild-fruits\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/bl2_grande.jpg?v=1513754215\" alt=\"\"></a>
-
-            </div>
-            <div class=\"post-info\">
-              <h3 class=\"title14\"><a href=\"/blogs/news/where-to-best-find-wild-fruits\" class=\"black\">Where to best find wild fruits</a></h3>
-              <span class=\"silver\"> 20 December , 2017 </span>
-            </div>
-          </div>
-          
-          
-
+      
         </div></div></div></div>
         <!-- End Item -->
          
@@ -319,10 +180,10 @@ echo "
               
               <article class=\"item-blog-list\">
                 <div class=\"banner-adv fade-out-in zoom-image\">
-                  <a href=\"/blogs/news/soil-health-starts-with-one-basic-principle-1\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/mas1_b5ad4912-7d1a-4f5e-b2d4-667a3e1d56d5_grande.jpg?v=1516960571\" alt=\"\"></a>
+                  <a href=\"/blogs/news/soil-health-starts-with-one-basic-principle-1\" class=\"adv-thumb-link\"><img src=\"/theme/assets/images/blog1.jpeg\" alt=\"\"></a>
                 </div>
                 <div class=\"blog-info border bg-white\">
-                  <h2 class=\"title30 font-bold\"><a href=\"/blogs/news/soil-health-starts-with-one-basic-principle-1\" class=\"black\">Soil health starts with one basic principle</a></h2>
+                  <h2 class=\"title30 font-bold\">Faba fix for corn's nitrogen need</h2>
                   <ul class=\"list-inline-block blog-comment-date\">
 
                     <li><label>Date </label><span class=\"color\"> 26 January , 2018 </span></li>
@@ -331,13 +192,14 @@ echo "
                   <p class=\"desc\">
                     
 
-                    We applaud their efforts, but you don’t have to commit to dumpster-diving to live a foraging-friendly lifestyle. One of the best ways to incorporat...
+                    Nitrogen is a vital nutrient for plants' growth. Farmers who grow sweet corn typically add nitrogen in the form of commercial fertilizer for best yield.
+                    The sweet corn yields were also significantly higher in the plots where the plant residue was left on the surface (no-till). Tilled residues decomposed quicker than the no-till, providing their nitrogen sooner. This proved to be too soon for the sweet corn. The no-till treatment slowed the decomposition of the faba bean residues. A delayed release of nitrogen into the soil better matched the needs of the young sweet corn.
+                    This study showed the timing of when faba was planted had a dramatic effect on the biomass -- the total weight -- the plants produced before winter weather stopped growth. More biomass means more nitrogen. Faba beans planted on August 1 had more than twice the biomass of faba beans planted just two weeks later.
                     
 
                   </p>
                   <div class=\"table social-readmore\">
                     <div class=\"text-left\">
-                      <a href=\"/blogs/news/soil-health-starts-with-one-basic-principle-1\" class=\"shop-button\">Read more</a>
                     </div>
                     <div class=\"text-right blog-social\">
                       <span>Share </span>
@@ -363,26 +225,33 @@ echo "
               
               <article class=\"item-blog-list\">
                 <div class=\"banner-adv fade-out-in zoom-image\">
-                  <a href=\"/blogs/news/soil-health-starts-with-one-basic-principle\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/mas1_grande.jpg?v=1516960569\" alt=\"\"></a>
+                  <img src=\"/theme/assets/images/blog7.jpeg\" alt=\"\"></a>
                 </div>
                 <div class=\"blog-info border bg-white\">
-                  <h2 class=\"title30 font-bold\"><a href=\"/blogs/news/soil-health-starts-with-one-basic-principle\" class=\"black\">Soil health starts with one basic principle</a></h2>
+                  <h2 class=\"title30 font-bold\">Farmers market a tradition for 'more than 30 years' in downtown Quincy</h2>
                   <ul class=\"list-inline-block blog-comment-date\">
 
-                    <li><label>Date </label><span class=\"color\"> 26 January , 2018 </span></li>
+                    <li><label>Date </label><span class=\"color\"> 30 January , 2018 </span></li>
                     <li><label>Comments </label><a href=\"#\" class=\"color\">0 </a></li>
                   </ul>
                   <p class=\"desc\">
                     
 
-                    We applaud their efforts, but you don’t have to commit to dumpster-diving to live a foraging-friendly lifestyle. One of the best ways to incorporat...
+                    The market is a Saturday morning staple of downtown from May through October. This year's six-month stay at Washington Park kicks off May 5.
+
+It's a great tradition, it's been going for more than 30 years, said Bruce Guthrie, executive director of the District, the organization that promotes downtown Quincy.
+
+Farmers markets are offered from 7 a.m. to noon, with an average of about 15 vendors each Saturday morning.We'll see as many as 30 different vendors during the season, Guthrie said.
+
+Quincy Medical Group is the principal sponsor of the market and focuses much of its emphasis on various projects and attractions for kids.
+
+QMG has been a wonderful addition to the market, Guthrie said. Guthrie said last year an average of 40 to 80 children took part in farmers market activities each weekend.The farmers market is also another way for people to experience downtown Quincy -- the architecture, walking around the area, enjoying the kids' activities and, of course, all of the fresh farm-to-market products, Guthrie said.
                     
 
                   </p>
                   <div class=\"table social-readmore\">
                     <div class=\"text-left\">
-                      <a href=\"/blogs/news/soil-health-starts-with-one-basic-principle\" class=\"shop-button\">Read more</a>
-                    </div>
+                    </div>  
                     <div class=\"text-right blog-social\">
                       <span>Share </span>
                       
@@ -407,25 +276,24 @@ echo "
               
               <article class=\"item-blog-list\">
                 <div class=\"banner-adv fade-out-in zoom-image\">
-                  <a href=\"/blogs/news/tips-for-ripening-your-fruit-2\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/list5_grande.jpg?v=1516960537\" alt=\"\"></a>
+                  <a href=\"/blogs/news/tips-for-ripening-your-fruit-2\" class=\"adv-thumb-link\"><img src=\"/theme/assets/images/blog3.jpeg\" alt=\"\"></a>
                 </div>
                 <div class=\"blog-info border bg-white\">
-                  <h2 class=\"title30 font-bold\"><a href=\"/blogs/news/tips-for-ripening-your-fruit-2\" class=\"black\">Tips for Ripening your Fruit</a></h2>
+                  <h2 class=\"title30 font-bold\">Indian farmers call for free markets</h2>
                   <ul class=\"list-inline-block blog-comment-date\">
 
-                    <li><label>Date </label><span class=\"color\"> 26 January , 2018 </span></li>
+                    <li><label>Date </label><span class=\"color\"> 21 March , 2018 </span></li>
                     <li><label>Comments </label><a href=\"#\" class=\"color\">0 </a></li>
                   </ul>
                   <p class=\"desc\">
                     
 
-                    We applaud their efforts, but you don’t have to commit to dumpster-diving to live a foraging-friendly lifestyle. One of the best ways to incorporat...
+                    Some Indian business leaders have begun to make protectionist noises, it is significant that the Kisan Coordination Committee (KCC) has released a liberal eight-point charter of demands ahead of a meeting to be held in New Delhi this week of various members of the World Trade Organization. The farmers have called for the liberalization of agriculture, the end of government intervention in the farm economy, scrapping of the National Food Security Act, direct benefit transfers to the poor, free trade in farm products and the removal of restrictions of rural land markets. The legacy of Shetkari Sanghatana leader Sharad Joshi is still alive.
                     
 
                   </p>
                   <div class=\"table social-readmore\">
                     <div class=\"text-left\">
-                      <a href=\"/blogs/news/tips-for-ripening-your-fruit-2\" class=\"shop-button\">Read more</a>
                     </div>
                     <div class=\"text-right blog-social\">
                       <span>Share </span>
@@ -451,26 +319,26 @@ echo "
               
               <article class=\"item-blog-list\">
                 <div class=\"banner-adv fade-out-in zoom-image\">
-                  <a href=\"/blogs/news/tips-for-ripening-your-fruit-1\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/list4_grande.jpg?v=1516960505\" alt=\"\"></a>
+                  <a href=\"/blogs/news/tips-for-ripening-your-fruit-1\" class=\"adv-thumb-link\"><img src=\"/theme/assets/images/blog4.jpeg\" alt=\"\"></a>
                 </div>
                 <div class=\"blog-info border bg-white\">
-                  <h2 class=\"title30 font-bold\"><a href=\"/blogs/news/tips-for-ripening-your-fruit-1\" class=\"black\">Tips for Ripening your Fruit</a></h2>
+                  <h2 class=\"title30 font-bold\">Things to keep in mind while venturing into organic food in India</h2>
                   <ul class=\"list-inline-block blog-comment-date\">
 
-                    <li><label>Date </label><span class=\"color\"> 26 January , 2018 </span></li>
+                    <li><label>Date </label><span class=\"color\"> 13 April , 2018 </span></li>
                     <li><label>Comments </label><a href=\"#\" class=\"color\">0 </a></li>
                   </ul>
                   <p class=\"desc\">
                     
 
-                    We applaud their efforts, but you don’t have to commit to dumpster-diving to live a foraging-friendly lifestyle. One of the best ways to incorporat...
+                    When it comes to the organic food market, one must be aware that with increasing demand, there are growing incidences of food adulteration, which are repeatedly reported across the globe.
+                    different varieties of crops are grown in different regions of the country, and they are faced with different issues related to pest infestation and soil quality. Hence, there is a need for more crop-specific and region-specific R&D on organic inputs.
+                    In addition, the survey found that farmers need access to equipment such as netting and poly-houses to protect their crops against insects. Fruit flies have led to destruction of crops such as oranges in the state of Sikkim. Here, we can learn from the Government of Bhutan, which provides equipment at subsidised rates—and the same can be replicated by Indian government as well.
                     
-
+                   
                   </p>
                   <div class=\"table social-readmore\">
-                    <div class=\"text-left\">
-                      <a href=\"/blogs/news/tips-for-ripening-your-fruit-1\" class=\"shop-button\">Read more</a>
-                    </div>
+                   
                     <div class=\"text-right blog-social\">
                       <span>Share </span>
                       
@@ -495,10 +363,10 @@ echo "
               
               <article class=\"item-blog-list\">
                 <div class=\"banner-adv fade-out-in zoom-image\">
-                  <a href=\"/blogs/news/tips-for-ripening-your-fruit\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/list3_grande.jpg?v=1516960430\" alt=\"\"></a>
+                  <a href=\"/blogs/news/tips-for-ripening-your-fruit\" class=\"adv-thumb-link\"><img src=\"/theme/assets/images/blog6.jpeg\" alt=\"\"></a>
                 </div>
                 <div class=\"blog-info border bg-white\">
-                  <h2 class=\"title30 font-bold\"><a href=\"/blogs/news/tips-for-ripening-your-fruit\" class=\"black\">Tips for Ripening your Fruit</a></h2>
+                  <h2 class=\"title30 font-bold\">States as policy labs for farming</h2>
                   <ul class=\"list-inline-block blog-comment-date\">
 
                     <li><label>Date </label><span class=\"color\"> 26 January , 2018 </span></li>
@@ -507,13 +375,14 @@ echo "
                   <p class=\"desc\">
                     
 
-                    We applaud their efforts, but you don’t have to commit to dumpster-diving to live a foraging-friendly lifestyle. One of the best ways to incorporat...
+                    The march provides us with an opportunity to examine the linkages between urban and rural India more deeply. The conventional wisdom is that the interests of producers (the farmers) and the consumers (the urban population, in particular) are diametrically opposite. Not only are they competing for the same limited pool of resources (water and energy), even markets are increasingly a zero-sum game. The assumption is farmers can get higher prices for their produce only by dipping into the shallow pockets of urban consumers, already struggling to cope with rising costs of living.
+
+This need not be the case. There are numerous inefficiencies, cartels and unsustainable habits—many intruding layers between farmers and consumers—which can be removed. So, the gap between what the farmer gets when she sells her crop and what the consumer pays in the market becomes substantial. 
                     
 
                   </p>
                   <div class=\"table social-readmore\">
                     <div class=\"text-left\">
-                      <a href=\"/blogs/news/tips-for-ripening-your-fruit\" class=\"shop-button\">Read more</a>
                     </div>
                     <div class=\"text-right blog-social\">
                       <span>Share </span>
@@ -537,74 +406,14 @@ echo "
                 </div>
               </article>
               
-              <article class=\"item-blog-list\">
-                <div class=\"banner-adv fade-out-in zoom-image\">
-                  <a href=\"/blogs/news/best-organic-garden-fertilisers\" class=\"adv-thumb-link\"><img src=\"//cdn.shopify.com/s/files/1/2644/1682/articles/bl1_grande.jpg?v=1513754330\" alt=\"\"></a>
-                </div>
-                <div class=\"blog-info border bg-white\">
-                  <h2 class=\"title30 font-bold\"><a href=\"/blogs/news/best-organic-garden-fertilisers\" class=\"black\">Best Organic Garden Fertilisers</a></h2>
-                  <ul class=\"list-inline-block blog-comment-date\">
-
-                    <li><label>Date </label><span class=\"color\"> 20 December , 2017 </span></li>
-                    <li><label>Comments </label><a href=\"#\" class=\"color\">0 </a></li>
-                  </ul>
-                  <p class=\"desc\">
-                    
-
-                    We applaud their efforts, but you don’t have to commit to dumpster-diving to live a foraging-friendly lifestyle. One of the best ways to incorporat...
-                    
-
-                  </p>
-                  <div class=\"table social-readmore\">
-                    <div class=\"text-left\">
-                      <a href=\"/blogs/news/best-organic-garden-fertilisers\" class=\"shop-button\">Read more</a>
-                    </div>
-                    <div class=\"text-right blog-social\">
-                      <span>Share </span>
-                      
-
-
-
-
-<a class=\"silver\" href=\"//twitter.com/share?text=Best%20Organic%20Garden%20Fertilisers&amp;url=https://fruit-demo.myshopify.com/blogs/news/best-organic-garden-fertilisers\" data-toggle=\"tooltip\" title=\"Twitter\"><i class=\"fa fa-twitter\"></i></a>
-<a class=\"silver\" href=\"//www.facebook.com/sharer.php?u=https://fruit-demo.myshopify.com/blogs/news/best-organic-garden-fertilisers\" data-toggle=\"tooltip\" title=\"Facebook\"><i class=\"fa fa-facebook\"></i></a>
-<a class=\"silver\" href=\"//plus.google.com/share?url=https://fruit-demo.myshopify.com/blogs/news/best-organic-garden-fertilisers\" data-toggle=\"tooltip\" title=\"Google+\"><i class=\"fa fa-google-plus\"></i></a>
-
-
-
-<a class=\"silver\" href=\"//pinterest.com/pin/create/button/?url=https://fruit-demo.myshopify.com/blogs/news/best-organic-garden-fertilisers&amp;media=http://cdn.shopify.com/s/files/1/2644/1682/articles/bl1_1024x1024.jpg?v=1513754330&amp;description=Best%20Organic%20Garden%20Fertilisers\" data-toggle=\"tooltip\" title=\"Pinterest\"><i class=\"fa fa-pinterest\"></i></a>
-
-
-
+              
                     </div>
                   </div>
                 </div>
               </article>
               
             </div>
-            
-            
-
-
-<div class=\"pagibar text-center\">
-  
-  
-  
-  
-  <a href=\"\" class=\"current-page\">1</a>
-  
-  
-  
-  
-  <a href=\"/blogs/news?page=2\">2</a>
-  
-  
-  
-  <a href=\"/blogs/news?page=2\" class=\"next-page\"> <i class=\"icon ion-ios-arrow-thin-right\"></i></a>
-  
-</div>
-
-            
+                
           </div>
         </div>
       </div>
@@ -618,3 +427,5 @@ echo "
 
     </main>
  </div>";
+ include("theme/include/footerr.php");
+echo get_script(); ?>
