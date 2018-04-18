@@ -40,41 +40,41 @@ echo "<div id=\"shopify-section-1516588728376\" class=\"shopify-section index-se
                       <div class=\"owl-item active\" style=\"width: 341px;\"><div class=\"item-popcat8\">
 							<div class=\"banner-adv overlay-image zoom-out\">
 								<a href=\"\" class=\"adv-thumb-link\">
-									 <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/30/assets/pop1.jpg?18016044672682309820\" alt=\"\">
-                                   <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/30/assets/pop1.jpg?18016044672682309820\" alt=\"\">
+									 <img src=\"/theme/assets/images/01_farmers_market-3.jpeg\" alt=\"\">
+                                   <img src=\"/theme/assets/images/01_farmers_market-3.jpeg\" alt=\"\">
 							
 								</a>
 							</div>
 							<div class=\"popcat-info8 text-center\">
 								<h3 class=\"title18\">Pallavaram Uzhavar Santhai</h3>
 								<p class=\"desc\">Uzhavar Sandhai (farmer’s market) is a scheme to promote direct contact between farmers and consumers in the Indian state of Tamil Nadu.</p>
-								<a href=\"/collection.php\" class=\"btn-arrow color\">View the site products</a>
+								<a href=\"/pallavaram.php\" class=\"btn-arrow color\">View the site products</a>
 							</div>
 						</div></div><div class=\"owl-item active\" style=\"width: 341px;\"><div class=\"item-popcat8\">
 							<div class=\"banner-adv overlay-image zoom-out\">
 								<a href=\"\" class=\"adv-thumb-link\">
-									 <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/30/assets/pop1.jpg?18016044672682309820\" alt=\"\">
-                                   <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/30/assets/pop1.jpg?18016044672682309820\" alt=\"\">
+									 <img src=\"/theme/assets/images/Farmers-Market-1.jpeg\" alt=\"\">
+                                   <img src=\"/theme/assets/images/Farmers-Market-1.jpeg\" alt=\"\">
 							
 								</a>
 							</div>
 							<div class=\"popcat-info8 text-center\">
 								<h3 class=\"title18\">Uzhavarsandhai Chromepet</h3>
 								<p class=\"desc\">The objective of this farmer's market is to promote direct contact between farmers and consumers, through which the farmer can get full profit. </p>
-								<a href=\"/collection.php\" class=\"btn-arrow color\">View the site products</a>
+								<a href=\"/chrompet.php\" class=\"btn-arrow color\">View the site products</a>
 							</div>
 						</div></div><div class=\"owl-item active\" style=\"width: 341px;\" active=\"\"><div class=\"item-popcat8\">
 							<div class=\"banner-adv overlay-image zoom-out\">
 								<a href=\"\" class=\"adv-thumb-link\">
-									 <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/30/assets/pop1.jpg?18016044672682309820\" alt=\"\">
-                                   <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/30/assets/pop1.jpg?18016044672682309820\" alt=\"\">
+									 <img src=\"/theme/assets/images/farmers-market-2.jpeg\" alt=\"\">
+                                   <img src=\"/theme/assets/images/farmers-market-2.jpeg\" alt=\"\">
 							
 								</a>
 							</div>
 							<div class=\"popcat-info8 text-center\">
 								<h3 class=\"title18\">Kundrathur Santhai</h3>
 								<p class=\"desc\">The markets are maintained and regulated by the Community Center and prices to the products are fixed on day basis.</p>
-								<a href=\"/collection.php\" class=\"btn-arrow color\">View the site products</a>
+								<a href=\"/kundrathur.php\" class=\"btn-arrow color\">View the site products</a>
 							</div>
 						</div></div></div>
 						

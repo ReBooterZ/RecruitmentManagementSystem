@@ -1,11 +1,10 @@
-
 <?php
 require("./theme/lib.php");
 require("./lib/dblib.php");
 
 $DB = new Db();
 
-$sql = "SELECT id, name, cost, images, category, description FROM items WHERE id > 0 and category = 1";
+$sql = "SELECT i.* FROM items i JOIN item_mapping im ON i.id = im.item_id WHERE im.communitycentre_id = 2";
 
 if ($result = $DB->select($sql)) {
     $items = $result;
@@ -22,7 +21,7 @@ if ($result = $DB->select($sql)) {
     echo get_meta();
     echo get_styles();
     ?>
-    <title> List Fruits </title>
+    <title> Kundrathur - List Items </title>
 </head>
 
 <body class="template-index" style="background: rgb(255, 255, 255);">
@@ -36,18 +35,10 @@ if ($result = $DB->select($sql)) {
                 <div class="container">
                     <div class="shop-banner banner-adv line-scale zoom-image">
                         <a href="#" class="adv-thumb-link">
-                            <img src="/theme/assets/images/fruits.jpeg"
+                            <img src="/theme/assets/images/markets-fruit-veg.jpeg"
                                  alt="Banner-header">
                         </a>
-                        <div class="banner-info">
-                            <h2 class="title30 color">
-                                Fruits
-                            </h2>
-                            <div class="bread-crumb white">
-                                <a href="/" title="Back to the frontpage" class="white">Collections</a>
-                                <span>Fruits</span>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="content-shop">
                         <div class="row">

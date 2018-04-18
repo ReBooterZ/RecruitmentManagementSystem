@@ -38,15 +38,6 @@ if ($result = $DB->select($sql)) {
                             <img src="/theme/assets/images/markets-fruit-veg.jpeg"
                                  alt="Banner-header">
                         </a>
-                        <div class="banner-info">
-                            <h2 class="title30 color">
-                                All
-                            </h2>
-                            <div class="bread-crumb white">
-                                <a href="/" title="Back to the frontpage" class="white">Collections</a>
-                                <span>All</span>
-                            </div>
-                        </div>
                     </div>
                     <div class="content-shop">
                         <div class="row">

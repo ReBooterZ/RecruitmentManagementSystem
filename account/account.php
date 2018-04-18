@@ -29,14 +29,14 @@ else
         <div class="content-page">
 <div class="shop-banner banner-adv line-scale zoom-image">
   <a href="#" class="adv-thumb-link">
-    <img src="/theme/assets/images/breadcrumb_image_6.jpg" alt="Banner-header">
+    <img src="/theme/assets/images/account_banner.jpeg" alt="Banner-header">
   </a>
-  <div class="banner-info">
+  <div class="banner-info text-center">
     <h2 class="title30 color">
         Account
     </h2>
-    <div class="bread-crumb white">
-    <a href="/" title="Back to the frontpage" class="white">Home</a>
+    <div class="bread-crumb color2">
+    <a href="/" title="Back to the frontpage" class="color2">Home</a>
      <span>
         Account
       </span>

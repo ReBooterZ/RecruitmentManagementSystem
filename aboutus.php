@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: chitra.p
- * Date: 4/7/2018
- * Time: 12:33 PM
- */
+
  require ("theme/lib.php");
 
 ?>
 <!DOCTYPE html>
-<!-- saved from url=(0033)https://fruit-demo.myshopify.com/ -->
 <html class="supports-js supports-no-touch supports-csstransforms supports-csstransforms3d supports-fontface js csstransitions shopify-features__smart-payment-buttons--enabled" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -44,9 +38,7 @@
 <?php echo get_header();
 ?>
 
-
-<html>
-
+<br><br>
 <?php
 
 echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></script>
@@ -102,7 +94,7 @@ echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></s
     
     
     
-    <img src=\"//cdn.shopify.com/s/files/1/2644/1682/t/20/assets/breadcrumb_image_5.jpg?9974154348750016803\" alt=\"Banner-header\">
+    <img src=\"/theme/assets/images/aboutus-banner.jpeg\" alt=\"Banner-header\">
     
   
  
@@ -379,6 +371,8 @@ echo "<script src=\"./styles/scripts/quickview.js\" type=\"text/javascript\"></s
   
   ";
 
-
+include ("./theme/include/footerr.php");
+echo get_script();
+echo "</body></html>"
 ?>
 
