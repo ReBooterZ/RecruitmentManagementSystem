@@ -119,7 +119,7 @@ echo "
 					<h2 class=\"title30 text-uppercase font-bold\">CONTACT FROM</h2>
 					<div class=\"form-contact\">
                       
-                       <form method=\"post\" action=\"/contact#contact_form\" id=\"contact_form\" accept-charset=\"UTF-8\" class=\"contact-form\"><input type=\"hidden\" name=\"form_type\" value=\"contact\"><input type=\"hidden\" name=\"utf8\" value=\"✓\">
+                       <form method=\"post\" action=\"/index.php\" id=\"contact_form\" accept-charset=\"UTF-8\" class=\"contact-form\"><input type=\"hidden\" name=\"form_type\" value=\"contact\"><input type=\"hidden\" name=\"utf8\" value=\"✓\">
 
           
 
